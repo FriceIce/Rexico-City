@@ -29,13 +29,13 @@ export default {
 </script>
 
 <style scoped>
-
 .logo {
   position: absolute;
   top: 0.9rem;
   left: 50%;
   transform: translateX(-50%);
 }
+
 .navbar {
   height: 3rem;
   position: sticky;
@@ -56,13 +56,30 @@ ul {
   flex-direction: column;
   position: absolute;
   top: 1.8rem;
-  right: 0; 
+  right: 0;
   background-color: black;
   display: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
 }
 
 ul.open {
   display: flex;
+}
+
+ul li {
+  margin: 0.5rem 0;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+ul li a:hover {
+  color: var(--orange);
 }
 
 .hamburger {
@@ -73,5 +90,4 @@ ul.open {
   font-size: 1.5rem;
   cursor: pointer;
 }
-
 </style>

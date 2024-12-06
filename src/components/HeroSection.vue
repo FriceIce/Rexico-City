@@ -32,8 +32,6 @@
     position: relative;
     height: 40vh;
     overflow: hidden;
-    /* border: 2px solid pink; */
-    
     height: 45rem;
   }
   
@@ -57,22 +55,22 @@
 
 
   .hero-content img{
-    margin-top: 4.5rem;
+    margin-top: 2rem;
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    width: 24rem;
+    width: 28rem;
   }
 
   .hero-content h1 {
-    font-size: 2.3rem; 
+    font-size: 3rem; 
     color: white;
     margin-top: 3.5rem;
     display: flex;
     justify-content: center;
     padding: 1rem;
     border-radius: 10px;
-    text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.3);
+    text-shadow: 6px 7px 10px rgba(0, 0, 0, 0.3);
     }
 
 
@@ -82,17 +80,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 4.5rem;
-    width: 5rem;
+    height: 6rem;
+    width: 7rem;
     margin: 0 auto;
     margin-top: 3.5rem;
     transition: all 0.3s ease;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   }
 
   button {
     font-family: jungle;
     padding: 0.5rem 1rem;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     border: 2px solid rgba(255, 255, 255, 0.2);
     background-color: var(--orange);
     color: white;

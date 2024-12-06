@@ -44,6 +44,7 @@ import Footer from './components/Footer.vue';
   --green: rgb(9, 76, 69);
   --orange: rgb(253, 150, 38);
   --grey: rgb(51, 51, 51);
+  --white: rgb(255, 255, 255);
 
   font-family: 'jungle'
 }

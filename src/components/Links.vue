@@ -12,6 +12,7 @@ export default {};
   
 <style scoped>
 .nav-links {
+  
   display: flex;
   gap: 2rem;
   padding: 1rem;
@@ -19,9 +20,10 @@ export default {};
 }
 
 .nav-links a {
+  
   color: white;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 2rem;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: all 0.3s ease;
