@@ -2,8 +2,10 @@
 /* import { RouterLink, RouterView } from 'vue-router' */
 import Navbar from './components/Navbar.vue'
 import HeroSection from './components/HeroSection.vue';
+import Links from './components/Links.vue';
 import VueCalendar from './components/VueCalendar.vue';
 import HorizontalCards from './components/HorizontalCards.vue';
+import HorizontalCards2 from './components/HorizontalCards2.vue';
 import Footer from './components/Footer.vue';
 
 </script>
@@ -12,19 +14,19 @@ import Footer from './components/Footer.vue';
   <div id="app">
     <Navbar />
     <HeroSection />
-    <section id="sections">
-      <div class="nav-links">
-        <a href="#calendar">Calendar</a>
-        <a href="#tickets">Tickets</a>
-        <a href="#mypage">Mypage</a>
-      </div>
-      <div id="calendar">
+    
+     
+      
+        <Links/>
         <VueCalendar />
-      </div>
-      <div id="cards">
+      
+      
         <HorizontalCards />
-      </div>
-    </section>
+      
+     
+        <HorizontalCards2 />
+    
+    
     <Footer />
   </div>
 </template>
