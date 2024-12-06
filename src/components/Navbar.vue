@@ -55,7 +55,7 @@ nav {
 ul {
   flex-direction: column;
   position: absolute;
-  top: 1.8rem;
+  top: 3.2rem;
   right: 0;
   background-color: black;
   display: none;
@@ -89,5 +89,30 @@ ul li a:hover {
   display: block;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+
+
+@media (max-width: 375px) {
+  .hamburger {
+  position: fixed;
+  top: 0.5rem;
+  right: 0.8rem;
+  display: block;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+ul {
+  flex-direction: column;
+  position: absolute;
+  top: 3.2rem;
+  right: 0;
+  background-color: black;
+  display: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
 }
 </style>

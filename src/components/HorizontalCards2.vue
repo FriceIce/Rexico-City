@@ -35,5 +35,11 @@
     border: 1px solid #ddd;
     padding: auto;
   }
+
+  @media (max-width: 375px) {
+  .cards-container {
+    justify-content: center;  
+  }
+}
   </style>
   

@@ -12,7 +12,6 @@ export default {};
   
 <style scoped>
 .nav-links {
-  
   display: flex;
   gap: 2rem;
   padding: 1rem;
@@ -20,7 +19,6 @@ export default {};
 }
 
 .nav-links a {
-  
   color: white;
   text-decoration: none;
   font-size: 2rem;
@@ -47,5 +45,22 @@ export default {};
 
 .nav-links a:hover:after {
   width: 100%;
+}
+
+@media (max-width: 375px) {
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.9rem;
+    width: 100%;
+    top: 1rem;
+    /* border: 2px solid pink; */
+    margin-top: 1.2rem;
+  }
+
+  .nav-links a {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
 }
 </style>
