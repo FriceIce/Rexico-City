@@ -6,7 +6,7 @@
       </video>
         <!-- <h1>Rexico City Live</h1> -->
         <img src="/src/assets/images/loggan.png" alt="Rexico City" class="hero-image">
-        <h1>Your journey starts here 🙀</h1>
+        <h1>Your journey starts here</h1>
         <button @click="readMore">Read More</button>
       </div>
       
