@@ -24,7 +24,7 @@ export default defineComponent({
 
     const openingHoursText = computed(() => {
       const selectedDate = date.value;
-      const isClosed = selectedDate.getDate() === 24 && selectedDate.getMonth() === 11; 
+      const isClosed = selectedDate.getDate() === 24 && selectedDate.getMonth() === 11;
       if (isClosed) {
         return `Friday ${selectedDate.getDate()} December\nThe park is closed on this day.`;
       } else {
@@ -40,53 +40,46 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style >
+
 /* Container for centering the content */
 .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+
+  height: 70vh;
+  background-color: rgb(122, 176, 132);
+  flex-direction: column;
 }
 
 /* Box containing the calendar and the opening hours */
 .calendar-box {
   display: flex;
-  width: 100%;
   gap: 2rem;
-  padding: 2rem;
-  background-color: var(--green);
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 200px;
+  height: auto;
+  margin-top: 3rem;
+
+
 }
 
 /* Calendar style */
-.calendar .p-datepicker {
+.calendar  {
   background-color: white;
   border-radius: 8px;
-  width: 300px;
   height: 300px;
+  width: 500px;
+
 }
+
+.calendar .p-datepicker {
+    width: 100%;
+  }
 
 /* Make the dates bigger */
-.calendar .p-datepicker .p-calendar-table td {
-  font-size: 1.5rem; /* Increase font size for date cells */
-  padding: 10px; /* Add padding for better spacing */
+.p-datepicker .p-datepicker-day-view {
+  font-size: 2rem;
 }
 
-/* Make weekdays bigger */
-.calendar .p-datepicker .p-datepicker-weekday {
-  font-size: 1.2rem; /* Increase font size for weekdays */
-}
-
-/* Make the month name bigger */
-.p-datepicker-header {
-  padding: 2rem;
-}
-
-/* Calendar table font size */
-.calendar .p-datepicker .p-calendar-table {
-  font-size: 1.5rem; /* Increase font size for the calendar table */
-}
 
 /* Opening hours box */
 .hours-box {
@@ -95,14 +88,42 @@ export default defineComponent({
   padding: 1rem;
   background-color: #f9f9f9;
   border-radius: 8px;
-  width: 300px;
-  height: 100px;
+height: 150px;
+  max-width: 500px;
 }
 
-/* Heading style for the hours box */
 .hours-box h3 {
   margin-bottom: 1rem;
-  font-size: 1.25rem;
+  font-size: 2rem;
   font-weight: bold;
 }
+
+.hours-box p {
+  font-size: 1.5rem;
+}
+
+.p-datepicker-header{
+  margin: 1rem;
+
+}
+
+/* Media Query for screens smaller than 1000px */
+@media (max-width: 1000px) {
+  .calendar-box {
+    flex-direction: column;
+
+
+  }
+
+  .calendar .p-datepicker {
+    width: 100%;
+    margin: auto;
+  }
+
+  .hours-box {
+    width: 100%;
+    margin: auto;
+  }
+}
+
 </style>
