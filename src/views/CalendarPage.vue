@@ -3,7 +3,7 @@
     <Navbar />
     <div class="calendar-page">
       <VueCalendar />
-      <h1>heeeeeej</h1>
+
     </div>
   </div>
 </template>
@@ -12,10 +12,12 @@
 import Navbar from '@/components/Navbar.vue';
 import VueCalendar from '@/components/VueCalendar.vue';
 
+
 export default {
   components: {
     Navbar,
     VueCalendar,
+
   },
 };
 </script>
