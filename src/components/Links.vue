@@ -1,15 +1,18 @@
 <template>
   <div class="nav-links">
-    <a href="#calendar">Calendar</a>
-    <a href="#tickets">Tickets</a>
-    <a href="#mypage">Mypage</a>
+    <!-- Använd router-link istället för vanliga a-taggar -->
+    <router-link to="/calendar">Calendar</router-link>
+    <router-link to="/tickets">Tickets</router-link>
+    <router-link to="/mypage">Mypage</router-link>
   </div>
 </template>
-  
+
 <script lang="ts">
-export default {};
+export default {
+  name: 'NavLinks'
+};
 </script>
-  
+
 <style scoped>
 .nav-links {
   display: flex;
@@ -18,7 +21,8 @@ export default {};
   justify-content: center;
 }
 
-.nav-links a {
+.nav-links a,
+.nav-links .router-link-active {
   color: white;
   text-decoration: none;
   font-size: 2rem;
@@ -28,7 +32,8 @@ export default {};
   position: relative;
 }
 
-.nav-links a:after {
+.nav-links a:after,
+.nav-links .router-link-active:after {
   content: '';
   position: absolute;
   width: 0;
@@ -39,11 +44,13 @@ export default {};
   transition: width 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links .router-link-active:hover {
   color: var(--orange);
 }
 
-.nav-links a:hover:after {
+.nav-links a:hover:after,
+.nav-links .router-link-active:hover:after {
   width: 100%;
 }
 
@@ -54,7 +61,6 @@ export default {};
     gap: 0.9rem;
     width: 100%;
     top: 1rem;
-    /* border: 2px solid pink; */
     margin-top: 1.2rem;
   }
 
