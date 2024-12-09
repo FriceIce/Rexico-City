@@ -1,36 +1,13 @@
 <script setup lang="ts">
-/* import { RouterLink, RouterView } from 'vue-router' */
-import Navbar from './components/Navbar.vue'
-import HeroSection from './components/HeroSection.vue';
-import Links from './components/Links.vue';
-import VueCalendar from './components/VueCalendar.vue';
-import HorizontalCards from './components/HorizontalCards.vue';
-import HorizontalCards2 from './components/HorizontalCards2.vue';
-import Footer from './components/Footer.vue';
-
+import Navbar from './components/Navbar.vue';
 </script>
 
 <template>
   <div id="app">
     <Navbar />
-    <HeroSection />
-    
-     
-      
-        <Links/>
-        <VueCalendar />
-      
-      
-        <HorizontalCards />
-      
-     
-        <HorizontalCards2 />
-    
-    
-    <Footer />
+    <router-view />
   </div>
 </template>
-
 <style >
 
 * {
