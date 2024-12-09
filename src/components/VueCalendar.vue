@@ -45,15 +45,15 @@ export default defineComponent({
 /* Container for centering the content */
 .container {
   display: flex;
-
   height: 70vh;
-  background-color: rgb(122, 176, 132);
+  background-color: rgb(153, 216, 165);
   flex-direction: column;
 }
 
 /* Box containing the calendar and the opening hours */
 .calendar-box {
   display: flex;
+ margin: auto;
   gap: 2rem;
   height: 200px;
   height: auto;
@@ -64,7 +64,6 @@ export default defineComponent({
 
 /* Calendar style */
 .calendar  {
-  background-color: white;
   border-radius: 8px;
   height: 300px;
   width: 500px;
@@ -81,11 +80,53 @@ export default defineComponent({
 }
 
 
+.p-datepicker-header{
+  margin-bottom: 2rem;
+
+}
+.p-datepicker-title{
+  background-color: var(--green);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 8px
+  ;
+}
+.p-datepicker-day:hover{
+background-color: var(--green);
+color: var(--white);
+}
+.p-datepicker-select-month {
+  font-size: 1.5rem;
+
+}
+.p-datepicker-select-year{
+ display: none;
+}
+
+.p-icon.p-button-icon{
+  color: var(--white);
+  background-color: var(--green);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 8px
+}
+
+.p-datepicker-day-cell.p-datepicker-other-month {
+  color: #0000008f;
+}
+.p-datepicker-weeknumber{
+  display:none ;
+}
+.p-datepicker-weekheader.p-disabled{
+  display:none;
+}
+
+
 /* Opening hours box */
 .hours-box {
   flex: 1;
-  border: 1px solid #ddd;
   padding: 1rem;
+  margin-right: 2rem;
   background-color: #f9f9f9;
   border-radius: 8px;
 height: 150px;
@@ -102,10 +143,7 @@ height: 150px;
   font-size: 1.5rem;
 }
 
-.p-datepicker-header{
-  margin: 1rem;
 
-}
 
 /* Media Query for screens smaller than 1000px */
 @media (max-width: 1000px) {
