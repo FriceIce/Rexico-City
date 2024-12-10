@@ -14,9 +14,11 @@
             <p>(Value at 42 $)</p>
         </header>
         <div class="cards">
-            <div class="card-1">
-                <h3></h3>
-                <p></p>
+            <div class="card-container-1">
+                <div class="card-1">
+                    <h3></h3>
+                    <p></p>
+                </div>
             </div>
             <div class="card-2">
                 <h3></h3>
@@ -103,11 +105,35 @@ export default {
     color: white;
 }
 
+/* .card-container-1{
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+    width: 27rem;
+    height: 20rem;    
+} */
+
+/* .card-container-1 .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
+/* .card-image {
+    background-image: url('../assets/images/dino_card-png');
+    background-size: cover;
+    background-position: center;
+} */
+
 .card-1 {
     background-image: url("../assets/images/dino_card.png");
     background-size: cover;
     background-position: center;
-    border: 1px solid #ccc;
     width: 16rem;
     height: 10rem;
     padding: 20px;
@@ -121,7 +147,6 @@ export default {
     background-position: center;
     width: 16rem;
     height: 10rem;
-    border: 1px solid #ccc;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
