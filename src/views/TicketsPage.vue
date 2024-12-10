@@ -4,26 +4,23 @@
     <div class="tickets-page">
         
         <header class="header">
-            <div><h2>Prices and Tickets</h2>
-            <div><h4>
+            <h2>Prices & Tickets</h2>
+            <h4>
                 On this page, we have gathered season passes, tickets, and experiences for an epic day at Rexico city.
-<h4>Right now:</h4>
-
-<p>Christmas offer on the Gold Card 👀🎢</p>
-<p>Purchase one Gold Card and receive one Green Card absolutely free</p>
-<p>(Value at 420 $)</p>
-
-    </h4></div> 
-    </div>
+            </h4>
+            <h3>Right now:</h3>
+            <p>Christmas offer on the Gold Card 👀🦕</p>
+            <p>Purchase one Gold Card and receive one Green Card absolutely free</p>
+            <p>(Value at 42 $)</p>
         </header>
         <div class="cards">
-            <div class="card">
+            <div class="card-1">
                 <h3></h3>
-                <p>Dino Card</p>
+                <p></p>
             </div>
-            <div class="card">
+            <div class="card-2">
                 <h3></h3>
-                <p>Gold Card</p>
+                <p></p>
             </div>
         </div>
     </div>
@@ -73,8 +70,16 @@ export default {
     
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
-    font-size: 3rem;
+    margin-top: 2.2rem;
+    font-size: 4rem;
+}
+
+.header h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    font-size: 2rem;
 }
 
 .header h4{
@@ -98,10 +103,28 @@ export default {
     color: white;
 }
 
-.card {
+.card-1 {
+    background-image: url("../assets/images/dino_card.png");
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #ccc;
+    width: 16rem;
+    height: 10rem;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-2 {
+    background-image: url("../assets/images/gold_card.png");
+    background-size: cover;
+    background-position: center;
+    width: 16rem;
+    height: 10rem;
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 </style>
