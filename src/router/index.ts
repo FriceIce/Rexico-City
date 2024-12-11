@@ -1,8 +1,7 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import MainPage from '@/views/MainPage.vue';
-import CalendarPage from '@/views/CalendarPage.vue';
-import TicketsPage from '@/views/TicketsPage.vue';
-
+import { createRouter, createWebHistory } from 'vue-router'
+import MainPage from '@/views/MainPage.vue'
+import CalendarPage from '@/views/CalendarPage.vue'
+import TicketsPage from '@/views/TicketsPage.vue'
 
 const routes = [
   {
@@ -20,11 +19,11 @@ const routes = [
     name: 'Tickets',
     component: TicketsPage,
   },
-];
+]
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
-});
+})
 
-export default router;
+export default router
