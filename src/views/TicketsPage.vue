@@ -1,155 +1,103 @@
+<script setup lang="ts"></script>
 <template>
- 
-
-    <div class="tickets-page">
-        
-        <header class="header">
-            <h2>Prices & Tickets</h2>
-            <h4>
-                On this page, we have gathered season passes, tickets, and experiences for an epic day at Rexico city.
-            </h4>
-            <h3>Right now:</h3>
+  <section class="text-white max-w-[960px] w-[90%] mx-auto">
+    <div class="p-4">
+      <header
+        class="space-y-6 bg-[#073024] text-center max-w-[640px] w-[90%] p-6 mx-auto my-10 md:my-16 rounded shadow-xl"
+      >
+        <h1 class="text-[30px] md:text-[50px] font-bold">Prices & Tickets</h1>
+        <p class="text-base">
+          On this page, we have gathered season passes, tickets, and experiences for an epic day at
+          Rexico city.
+        </p>
+        <div class="space-y-4">
+          <h3 class="text-2xl font-bold">Right now:</h3>
+          <div class="">
             <p>Christmas offer on the Gold Card 👀🦕</p>
-            <p>Purchase one Gold Card and receive one Green Card absolutely free</p>
+            <p>Purchase one Gold Card = one Green Card absolutely free</p>
             <p>(Value at 42 $)</p>
-        </header>
-        <div class="cards">
-            <div class="card-container-1">
-                <div class="card-1">
-                    <h3></h3>
-                    <p></p>
-                </div>
-            </div>
-            <div class="card-2">
-                <h3></h3>
-                <p></p>
-            </div>
+          </div>
         </div>
+      </header>
+      <div class="space-y-[100px]">
+        <div class="">
+          <h2 class="text-3xl">Season Pass 2025</h2>
+          <p class="text-base">
+            Buy one of our season passes and enjoy free admission with unlimited rides all summer.
+            Don’t miss the special offer on the Gold Pass ⭐️
+          </p>
+        </div>
+        <div class="w-full">
+          <ul class="card-layout gap-x-6 gap-y-24 flex-wrap">
+            <li
+              class="flex max-w-[360px] bg-[#0e6e61] h-full w-full rounded-lg mx-auto lg:mx-0 shadow-xl"
+            >
+              <div class="relative flex flex-col">
+                <div class="absolute top-[-64px] left-[50%] translate-x-[-50%] w-[220px]">
+                  <img
+                    src="../assets/images/dino_card.png"
+                    alt=""
+                    class="w-full h-[128px] object-cover object-center rounded-lg shadow-lg"
+                  />
+                </div>
+                <section
+                  class="flex-1 flex flex-col gap-4 space-y-4 w-full text-center pt-[80px] p-4"
+                >
+                  <div class="flex flex-col gap-3 justify-between">
+                    <h1 class="font-bold text-4xl">Green Card</h1>
+                    <p class="">
+                      Free entry EVERY open day including ALL concerts and dance nights all summer
+                      2025! ⭐️
+                    </p>
+                  </div>
+                  <div class="flex-1 flex flex-col justify-end gap-3">
+                    <p class="text-xl">42 $</p>
+                    <button class="bg-[#e06891] w-full py-[12px] rounded-full lg:hover:scale-105">
+                      Buy now
+                    </button>
+                  </div>
+                </section>
+              </div>
+            </li>
+            <li class="flex max-w-[360px] bg-[#ffebc6] w-full rounded-lg mx-auto lg:mx-0 shadow-xl">
+              <div class="relative flex flex-col">
+                <div class="absolute top-[-64px] left-[50%] translate-x-[-50%] w-[220px]">
+                  <img
+                    src="../assets/images/gold_card.png"
+                    alt=""
+                    class="w-full h-[128px] object-cover object-center rounded-lg shadow-lg"
+                  />
+                </div>
+                <section
+                  class="flex-1 flex flex-col gap-4 space-y-4 w-full text-center pt-[80px] p-4"
+                >
+                  <div class="flex flex-col gap-3 justify-between">
+                    <h1 class="font-bold text-4xl text-[#886611]">
+                      Gold Card + Green Card included!
+                    </h1>
+                    <p class="text-black">
+                      Right now, you get the Green Card for free when you purchase a Gold Card! 👀
+                    </p>
+                  </div>
+                  <div class="flex-1 flex flex-col justify-end gap-3">
+                    <p class="text-xl text-black">189.9 $</p>
+                    <button class="bg-[#2e3038] w-full py-[12px] rounded-full lg:hover:scale-105">
+                      Buy now
+                    </button>
+                  </div>
+                </section>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </section>
 </template>
 
-<script>
-export default {
-    name: 'TicketsPage',
-    data() {
-        return {
-            // Add your data properties here
-        };
-    },
-    methods: {
-        // Add your methods here
-    },
-    mounted() {
-        // Add any code to run when the component is mounted
-    }
-};
-</script>
-
-
-
-
-
-<style >
-.tickets-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+<style scoped>
+.card-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
 }
-
-.header {
-    margin-top: 4rem;
-    background-color: rgb(9, 48, 36);
-    margin-bottom: 20px;
-    color: white;
-    height: 30rem;
-    width: 50rem;
-    border-radius: 15px;
-    /* border: 2px solid pink; */
-}
-
-.header h2{
-    
-    display: flex;
-    justify-content: center;
-    margin-top: 2.2rem;
-    font-size: 4rem;
-}
-
-.header h3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-    font-size: 2rem;
-}
-
-.header h4{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 4rem;
-    font-size: 1rem;
-}
-
-.header p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-    font-size: 1rem;
-}
-.cards {
-    display: flex;
-    gap: 20px;
-    color: white;
-}
-
-/* .card-container-1{
-    margin-top: 10rem;
-    display: flex;
-    justify-content: center;
-    background-color: aqua;
-    width: 27rem;
-    height: 20rem;    
-} */
-
-/* .card-container-1 .card-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-    position: absolute;
-    top: 0;
-    left: 0;
-} */
-
-/* .card-image {
-    background-image: url('../assets/images/dino_card-png');
-    background-size: cover;
-    background-position: center;
-} */
-
-.card-1 {
-    background-image: url("../assets/images/dino_card.png");
-    background-size: cover;
-    background-position: center;
-    width: 16rem;
-    height: 10rem;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.card-2 {
-    background-image: url("../assets/images/gold_card.png");
-    background-size: cover;
-    background-position: center;
-    width: 16rem;
-    height: 10rem;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
 </style>
