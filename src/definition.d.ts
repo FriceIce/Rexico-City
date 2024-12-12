@@ -1,0 +1,21 @@
+type TicketCard = {
+  id: number
+  background: string
+  image: {
+    src: string
+    alt: string
+  }
+  title: {
+    text: string
+    color: string
+  }
+  subtitle: {
+    text: string
+    color: string
+  }
+  price: number
+  button: {
+    bgColor: string
+    text: string
+  }
+}
