@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "background": "#0e6e61",
+    "image": {
+      "src": "/images/dino_card.png",
+      "alt": "dino_card"
+    },
+    "title": {
+      "text": "GREEN CARD",
+      "color": "#FFFFFF"
+    },
+    "subtitle": {
+      "text": "Free entry EVERY open day including ALL concerts and dance nights all summer 2025! ⭐️",
+      "color": "#FFFFFF"
+    },
+    "price": 42,
+    "button": {
+      "bgColor": "#e06891",
+      "text": "#FFFFFF"
+    }
+  },
+  {
+    "id": 2,
+    "background": "#ffebc6",
+    "image": {
+      "src": "/images/gold_card.png",
+      "alt": "dino_card"
+    },
+    "title": {
+      "text": "Gold Card + Green Card included!",
+      "color": "#e4aa37"
+    },
+    "subtitle": {
+      "text": "Right now, you get the Green Card for free when you purchase a Gold Card! 👀",
+      "color": "#000000"
+    },
+    "price": 189.9,
+    "button": {
+      "bgColor": "#000000",
+      "text": "#FFFFFF"
+    }
+  }
+]
