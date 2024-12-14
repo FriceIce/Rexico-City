@@ -19,3 +19,12 @@ type TicketCard = {
     text: string
   }
 }
+
+type Product = {
+  id: number
+  title: string
+  price: number
+  cardType: string
+  description: string
+  includes: string[]
+}
