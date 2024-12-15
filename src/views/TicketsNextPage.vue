@@ -2,6 +2,9 @@
 import { useQuery } from '@tanstack/vue-query'
 import { useRoute } from 'vue-router'
 import axios from 'axios'
+import { ref } from 'vue'
+
+const ticketCounter = ref<number>(0)
 
 // useRoute for accessing route params
 const route = useRoute()
@@ -50,19 +53,23 @@ const { data, isLoading, isError } = useQuery<Product>({
             </div>
             <div class="flex items-center gap-4">
               <button
-                class="bg-[#2a7056] size-12 opacity-50 rounded-full grid place-items-center lg:cursor-pointer"
+                :class="`bg-[#2a7056] size-12 rounded-full grid place-items-center lg:cursor-pointer ${ticketCounter === 0 && 'opacity-50'}`"
+                @click="ticketCounter--"
               >
                 <p class="text-white text-center">-</p>
               </button>
-              <p>0</p>
+              <p class="w-2">{{ ticketCounter }}</p>
               <button
                 class="bg-[#2a7056] size-12 rounded-full grid place-items-center lg:cursor-pointer"
+                @click="ticketCounter++"
               >
                 <p class="text-white text-center">+</p>
               </button>
             </div>
           </div>
-          <button class="bg-[#006649] text-white w-full py-[12px] rounded-full opacity-50">
+          <button
+            :class="`bg-[#006649] text-white w-full py-[12px] rounded-full ${ticketCounter === 0 && 'opacity-50'}`"
+          >
             Next step
           </button>
         </section>
