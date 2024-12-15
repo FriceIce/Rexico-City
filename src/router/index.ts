@@ -3,6 +3,7 @@ import MainPage from '@/views/MainPage.vue'
 import CalendarPage from '@/views/CalendarPage.vue'
 import TicketsPage from '@/views/TicketsPage.vue'
 import TicketsNextPage from '@/views/TicketsNextPage.vue'
+import SearchPage from '@/views/SearchPage.vue'
 
 const routes = [
   {
@@ -25,6 +26,11 @@ const routes = [
     name: 'Card',
     component: TicketsNextPage,
   },
+  {
+    path: '/search',
+    name: 'Search',
+    component: SearchPage,
+  }
 ]
 
 const router = createRouter({

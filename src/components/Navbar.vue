@@ -1,6 +1,9 @@
 <template>
   <header class="navbar">
     <nav>
+      <div class="search-icon" @click="goToSearch">
+        <font-awesome-icon icon="magnifying-glass" />
+      </div>
       <div class="logo"></div>
       <div class="hamburger" @click="toggleMenu">
         ☰
@@ -16,14 +19,25 @@
 
 <script lang="ts">
 import { ref } from 'vue';
+import { useRouter } from 'vue-router'
+import { FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faMagnifyingGlass)
 
 export default {
+  components: {
+  FontAwesomeIcon,
+  },
   setup() {
     const isMenuOpen = ref(false);
-    const toggleMenu = () => {
-      isMenuOpen.value = !isMenuOpen.value;
-    };
-    return { isMenuOpen, toggleMenu };
+    const router = useRouter()
+
+    const toggleMenu = () => { isMenuOpen.value = !isMenuOpen.value;};
+    const goToSearch = () => {router.push('/search')}
+    
+    return { isMenuOpen, toggleMenu, goToSearch };
   },
 };
 </script>
@@ -34,6 +48,15 @@ export default {
   top: 0.9rem;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.search-icon {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001;
 }
 
 .navbar {
@@ -115,4 +138,6 @@ ul {
   transition: all 0.3s ease-in-out;
 }
 }
+
+
 </style>
