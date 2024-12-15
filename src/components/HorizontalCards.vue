@@ -1,13 +1,33 @@
 <template>
   <div class="cards-container">
-    <div class="cards" v-for="i in 5" :key="i">
-      <div class="card">Card {{ i }}</div>
+    <div
+      class="cards"
+      v-for="card in cards"
+      :key="card.id"
+    >
+      <div class="card">
+        <h3>{{ card.title }}</h3>
+        <p>{{ card.content }}</p>
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-export default {};
+interface Card {
+  id: number | string;
+  title: string;
+  content: string;
+}
+
+export default {
+  props: {
+    cards: {
+      type: Array as () => Card[],
+      required: true,
+    },
+  },
+};
 </script>
 
 <style scoped>

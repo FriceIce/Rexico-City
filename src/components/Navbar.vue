@@ -20,11 +20,13 @@
 <script lang="ts">
 import { ref } from 'vue';
 import { useRouter } from 'vue-router'
-import { FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faMagnifyingGlass)
+
+
 
 export default {
   components: {
@@ -36,7 +38,6 @@ export default {
 
     const toggleMenu = () => { isMenuOpen.value = !isMenuOpen.value;};
     const goToSearch = () => {router.push('/search')}
-    
     return { isMenuOpen, toggleMenu, goToSearch };
   },
 };
@@ -52,9 +53,9 @@ export default {
 
 .search-icon {
   position: absolute;
-  top: 0.5rem;
+  top: 0.8rem;
   left: 1rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
   z-index: 1001;
 }

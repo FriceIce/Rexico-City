@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import Navbar from './components/Navbar.vue';
+/* import Navbar from './components/Navbar.vue'; */
 </script>
 
 <template>
   <div id="app">
-    <Navbar />
-    <router-view />
+  
+    <transition name="slide-right">
+      <router-view />
+    </transition>
   </div>
 </template>
 <style >
@@ -33,7 +35,19 @@ import Navbar from './components/Navbar.vue';
   font-style: normal;
 }
 
-
+/* Slide-in effect for entering from the right */
+.slide-right-enter-active {
+  transition: transform 0.3s ease-out;
+}
+.slide-right-enter {
+  transform: translateX(100%);
+}
+.slide-right-leave-active {
+  transition: transform 0.3s ease-out;
+}
+.slide-right-leave-to {
+  transform: translateX(100%);
+}
 
 
 </style>
