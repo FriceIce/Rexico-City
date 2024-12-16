@@ -1,24 +1,23 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-import Navbar from './components/Navbar.vue';
-const route = useRoute()
+import Navbar from './components/Navbar.vue'
 import Footer from '../src/components/Footer.vue'
+import ShoppingCart from '@/components/ShoppingCart.vue'
+const route = useRoute()
 </script>
 
 <template>
-  <div id="app">
-    <Navbar v-if="!route.meta.hideNavbar"/>
-   
+  <div id="app relative">
+    <Navbar v-if="!route.meta.hideNavbar" />
+    <!-- <ShoppingCart /> -->
     <transition name="slide-right">
       <router-view />
     </transition>
 
-    <Footer/>
-    
+    <Footer />
   </div>
 </template>
-<style >
-
+<style>
 * {
   margin: 0;
   padding: 0;
@@ -26,17 +25,17 @@ import Footer from '../src/components/Footer.vue'
 }
 
 :root {
-  background-image: url("./assets/images/jungle.png");
+  background-image: url('./assets/images/jungle.png');
   --green: rgb(9, 76, 69);
   --orange: rgb(253, 150, 38);
   --grey: rgb(51, 51, 51);
   --white: rgb(255, 255, 255);
 
-  font-family: 'jungle'
+  font-family: 'jungle';
 }
 
 @font-face {
-  font-family: "jungle";
+  font-family: 'jungle';
   src: url(/fonts/JungleAdventurer.ttf);
   font-weight: normal;
   font-style: normal;
@@ -55,6 +54,4 @@ import Footer from '../src/components/Footer.vue'
 .slide-right-leave-to {
   transform: translateX(100%);
 }
-
-
 </style>
