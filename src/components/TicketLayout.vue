@@ -41,7 +41,7 @@ const { data, isLoading } = useQuery<Array<TicketCard>>({
             </p>
           </div>
           <div class="flex-1 flex flex-col justify-end gap-3">
-            <p class="text-xl" :style="`color: ${ticket.subtitle.color}`">{{ ticket.price }} $</p>
+            <p class="text-xl" :style="`color: ${ticket.subtitle.color}`">$ {{ ticket.price }}</p>
             <RouterLink :to="`/tickets/${ticket.id}`">
               <button
                 class="w-full py-[12px] rounded-full lg:hover:scale-105 transition-all"
