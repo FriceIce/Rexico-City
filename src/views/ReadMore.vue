@@ -1,76 +1,208 @@
 <!-- <template>
-  <div class="info-page">
-    <header class="info-header">
-      <h1>Welcome to the Information Page</h1>
-      <p>Explore different sections of our site through this page.</p>
-    </header>
-
-    <nav class="info-navigation">
-      <button @click="navigateTo('/calendar')">Calendar</button>
-      <button @click="navigateTo('/tickets')">Tickets</button>
-      <button @click="navigateTo('/search')">Search</button>
-    </nav>
-
-    <section class="info-content">
-      <article>
-        <h2>About Rexico City</h2>
-        <p>
-          Rexico City is the ultimate destination for dinosaur enthusiasts. Learn more about our
-          attractions and events on this page.
+  <section class="text-white max-w-[960px] w-[90%] mx-auto">
+    <div class="p-4">
+      <header
+        class="space-y-6 bg-[#073024] text-center max-w-[640px] w-[90%] p-6 mx-auto my-10 md:my-16 rounded shadow-xl"
+      >
+        <h1 class="text-[30px] md:text-[50px] font-bold">About Rexico City</h1>
+        <p class="text-base, text-xl">
+          On this page, we have gathered season passes, tickets, and experiences for an epic day at
+          Rexico city.
         </p>
-      </article>
-
-      <article>
-        <h2>Upcoming Events</h2>
-        <p>Check out our calendar for the latest events happening in Rexico City.</p>
-      </article>
-
-      <article>
-        <h2>Get Your Tickets</h2>
-        <p>Purchase tickets for your favorite attractions directly from the Tickets page.</p>
-      </article>
-    </section>
-  </div>
+        <p class="text-base, text-xl">
+          Rexico City is a Epic Jungle Adventurer with the last living dinosaur of our time
+        </p>
+        <div class="space-y-4">
+          <h3 class="text-2xl font-bold">
+            By navigation through out buttons you can see tickets and calender days
+          </h3>
+          <div class="">
+            <p>We have different offers for every season</p>
+          </div>
+        </div>
+      </header>
+      <div class="space-y-[100px]">
+        <div class="">
+          <nav class="info-navigation">
+            <router-link to="/calendar">
+              <button>Calendar</button>
+            </router-link>
+            <router-link to="/tickets">
+              <button>Tickets</button>
+            </router-link>
+            <router-link to="/search">
+              <button>Search</button>
+            </router-link>
+          </nav>
+        </div>
+        <div class="w-full">
+          <TicketsLayout />
+        </div>
+        <div>
+          <section class="text-white mt-20" id="contact">
+            <h2 class="text-4xl font-bold text-white text-left mb-4 px-4 xl:pl-16">
+              Contact Rexico for futher questions
+            </h2>
+            <div
+              class="grid md:grid-cols-2 gap-4 relative px-4 xl:px-16 mt-8"
+              data-aos="zoom-in-up"
+            >
+              <div>
+                <p class="text-white">
+                  <!-- If you have any question or need consultaion, then you have my contact
+          information below to reach me -->
+                </p>
+                <div class="col-lg-4 col-md-4 mb-lg-0 mt-5">
+                  <div class="flex mb-10 items-center">
+                    <div
+                      class="p-2"
+                      style="
+                        background: #073024;
+                        width: 50px;
+                        height: 46px;
+                        display: flex;
+                        justify-content: center;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        border: 1px solid#111a3e;
+                        backdrop-filter: blur(9px);
+                        -webkit-backdrop-filter: blur(9px);
+                      "
+                    >
+                      <img
+                        src="https://img.icons8.com/metro/50/ffffff/new-post.png"
+                        alt="new-post"
+                        class="w-6"
+                      />
+                    </div>
+                    <div class="ml-5 text-white">
+                      <h4>Email</h4>
+                      <p>Rexico@rexico.se</p>
+                    </div>
+                  </div>
+                  <div class="flex mb-10 items-center">
+                    <div
+                      class="p-2"
+                      style="
+                        background: #073024;
+                        width: 50px;
+                        height: 46px;
+                        display: flex;
+                        justify-content: center;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        border: 1px solid#111a3e;
+                        backdrop-filter: blur(9px);
+                        -webkit-backdrop-filter: blur(9px);
+                      "
+                    >
+                      <img
+                        src="https://img.icons8.com/ios-filled/50/ffffff/phone.png"
+                        alt="Phone"
+                        class="w-6"
+                      />
+                    </div>
+                    <div class="ml-5 text-white">
+                      <h4>phone</h4>
+                      <p>+467000000</p>
+                    </div>
+                  </div>
+                  <div class="flex mb-10 items-center">
+                    <div
+                      class="p-2"
+                      style="
+                        background: #073024;
+                        width: 50px;
+                        height: 46px;
+                        display: flex;
+                        justify-content: center;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        border: 1px solid#111a3e;
+                        backdrop-filter: blur(9px);
+                        -webkit-backdrop-filter: blur(9px);
+                      "
+                    >
+                      <img
+                        src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png"
+                        alt="Linkedin"
+                        class="w-6"
+                      />
+                    </div>
+                    <div class="ml-5 text-white">
+                      <h4>Linkedin</h4>
+                      <p>www.LinkedIn.com</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                style="
+                  /* background:; */
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 20px;
+                  overflow: hidden;
+                  border: 1px solid#111a3e;
+                  backdrop-filter: blur(9px);
+                  -webkit-backdrop-filter: blur(9px);
+                "
+              >
+                <form class="flex flex-col p-2" data-aos="zoom-in-up">
+                  <div class="mb-6">
+                    <label for="email" class="text-white block mb-2 text-sm font-medium"
+                      >Email</label
+                    >
+                    <input
+                      type="Email"
+                      id="email"
+                      class="bg-[#073024] placeholder:bg-[#073024] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                      placeholder="email@gmail.com"
+                      name="email"
+                    />
+                  </div>
+                  <div class="mb-6">
+                    <label for="subject" class="text-white block mb-2 text-sm font-medium"
+                      >Subject</label
+                    >
+                    <input
+                      type="subject"
+                      id="subject"
+                      class="bg-[#073024] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                      placeholder="subject"
+                      name="subject"
+                    />
+                  </div>
+                  <div class="mb-6">
+                    <label for="message" class="text-white block mb-2 text-sm font-medium"
+                      >Message</label
+                    >
+                    <textarea
+                      id="Message"
+                      class="bg-[#073024] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                      placeholder="Lets'talk about ... "
+                      name="Message"
+                    ></textarea>
+                  </div>
+                  <button
+                    class="z-1 w-[100%!important] px-6 md:px-7 py-3 rounded-full sm:w-max flex justify-center text-white bg-primary border-2 border-transparent"
+                  >
+                    Send Message
+                  </button>
+                </form>
+              </div>
+              <div
+                class="bg-gradient-to-tr opacity-25 bg-[#073024] to bg-primary blur-2xl h-20 w-80 z-0 absolute -top-1/2 -left-4 tansform -translte-x-2/3 -translate-1/2"
+              ></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
-<script lang="ts">
-import { useRouter } from 'vue-router'
-
-export default {
-  name: 'MoreInfo',
-  setup() {
-    const router = useRouter()
-
-    const navigateTo = (path: string) => {
-      router.push(path)
-    }
-
-    return { navigateTo }
-  },
-}
-</script>
-
-<style scoped>
-.info-page {
-  padding: 2rem;
-  font-family: Arial, sans-serif;
-}
-
-.info-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.info-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.info-header p {
-  font-size: 1.2rem;
-  color: #666;
-}
-
+<style>
 .info-navigation {
   display: flex;
   justify-content: center;
@@ -92,56 +224,4 @@ export default {
 .info-navigation button:hover {
   background-color: var(--dark-orange, #e65100);
 }
-
-.info-content {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-
-.info-content h2 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.info-content p {
-  font-size: 1.1rem;
-  color: #333;
-}
-</style> -->
-
-<template>
-  <section class="text-white max-w-[960px] w-[90%] mx-auto">
-    <div class="p-4">
-      <header
-        class="space-y-6 bg-[#073024] text-center max-w-[640px] w-[90%] p-6 mx-auto my-10 md:my-16 rounded shadow-xl"
-      >
-        <h1 class="text-[30px] md:text-[50px] font-bold">Prices & Tickets</h1>
-        <p class="text-base">
-          On this page, we have gathered season passes, tickets, and experiences for an epic day at
-          Rexico city.
-        </p>
-        <div class="space-y-4">
-          <h3 class="text-2xl font-bold">Right now:</h3>
-          <div class="">
-            <p>Christmas offer on the Gold Card 👀🦕</p>
-            <p>Purchase one Gold Card = one Green Card absolutely free</p>
-            <p>(Value at 42 $)</p>
-          </div>
-        </div>
-      </header>
-      <div class="space-y-[100px]">
-        <div class="">
-          <h2 class="text-3xl">Season Pass 2025</h2>
-          <p class="text-base">
-            Buy one of our season passes and enjoy free admission with unlimited rides all summer.
-            Don’t miss the special offer on the Gold Pass ⭐️
-          </p>
-        </div>
-        <div class="w-full">
-          <TicketsLayout />
-        </div>
-      </div>
-    </div>
-  </section>
-</template>
+</style>
