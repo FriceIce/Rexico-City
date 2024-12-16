@@ -1,55 +1,56 @@
 <template>
   <header class="navbar">
-    
     <nav>
       <div class="search-icon" @click="goToSearch">
         <font-awesome-icon icon="magnifying-glass" />
       </div>
 
       <!-- Logo (Rexico City) -->
-      <div class="logo" @click="goToHome">
-        Rexico City
-      </div>
-      
-      <div class="hamburger" @click="toggleMenu">
-        ☰ 
-      </div>
+      <div class="logo" @click="goToHome">Rexico City</div>
+
+      <div class="hamburger" @click="toggleMenu">☰</div>
       <ul :class="{ open: isMenuOpen }">
         <li><a href="/">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+
+        <li>
+          <router-link to="/ReadMore">
+            <button>Contact</button>
+          </router-link>
+        </li>
       </ul>
     </nav>
   </header>
 </template>
 
 <script lang="ts">
-import { ref } from 'vue';
+import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
-import router from '@/router';
 
 library.add(faMagnifyingGlass)
 
-
-
 export default {
   components: {
-  FontAwesomeIcon,
+    FontAwesomeIcon,
   },
   setup() {
-    const isMenuOpen = ref(false);
+    const isMenuOpen = ref(false)
     const router = useRouter()
-    const toggleMenu = () => { isMenuOpen.value = !isMenuOpen.value;};
-    const goToSearch = () => {router.push('/search')}
+    const toggleMenu = () => {
+      isMenuOpen.value = !isMenuOpen.value
+    }
+    const goToSearch = () => {
+      router.push('/search')
+    }
     const goToHome = () => {
       router.push('/')
     }
-    return { isMenuOpen, toggleMenu, goToSearch, goToHome };
+    return { isMenuOpen, toggleMenu, goToSearch, goToHome }
   },
-};
+}
 </script>
 
 <style scoped>
@@ -71,10 +72,7 @@ export default {
   /* color: var(--orange); */ /* Optional hover effect */
   background-color: rgba(255, 255, 255, 0.2);
   z-index: -3000;
-  
 }
-
-
 
 .search-icon {
   position: fixed;
@@ -122,10 +120,7 @@ export default {
   color: white;
   padding: 1rem;
   z-index: 1000;
-  
 }
-
-
 
 nav {
   display: flex;
@@ -163,33 +158,26 @@ ul li a:hover {
   color: var(--orange);
 }
 
-
-
-
-
-
 @media (max-width: 375px) {
   .hamburger {
-  position: fixed;
-  top: 0.5rem;
-  right: 0.8rem;
-  display: block;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
+    position: fixed;
+    top: 0.5rem;
+    right: 0.8rem;
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
 
-ul {
-  flex-direction: column;
-  position: absolute;
-  top: 3.2rem;
-  right: 0;
-  background-color: black;
-  display: none;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  transition: all 0.3s ease-in-out;
+  ul {
+    flex-direction: column;
+    position: absolute;
+    top: 3.2rem;
+    right: 0;
+    background-color: black;
+    display: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-in-out;
+  }
 }
-}
-
-
 </style>
