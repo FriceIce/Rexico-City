@@ -41,45 +41,52 @@ export default defineComponent({
 </script>
 
 <style>
+.calendar-page{
+  display: flex;
+  
+  align-items: center;
+  height: 100vh;
 
-
-
-
+}
 /* Container for centering the content */
 .container {
   display: flex;
   justify-content: space-between;
-
-  height: 70vh;
+  height: auto;
   width: 100%;
+  margin: 0 auto;
   background-color: rgb(153, 216, 165);
   flex-direction: column;
   margin-bottom: 2rem;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 /* Box containing the calendar and the opening hours */
 .calendar-box {
   display: flex;
- margin: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 2rem;
   gap: 2rem;
-  height: 200px;
-  height: auto;
   margin-top: 3rem;
-
-
+  width: 100%;
 }
 
 /* Calendar style */
-.calendar  {
+.calendar {
   border-radius: 8px;
-  height: 300px;
-  width: 500px;
-
+  height: auto;
+  max-width: 500px;
+  flex: 1;
 }
 
 .calendar .p-datepicker {
-    width: 100%;
-  }
+  width: 100%;
+}
+
+
+
 
 /* Make the dates bigger */
 .p-datepicker .p-datepicker-day-view {
@@ -94,7 +101,7 @@ export default defineComponent({
 .p-datepicker-title{
   background-color: var(--green);
   color: var(--white);
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 8px
   ;
 }
@@ -103,7 +110,7 @@ background-color: var(--green);
 color: var(--white);
 }
 .p-datepicker-select-month {
-  font-size: 1.5rem;
+  font-size: 2rem;
 
 }
 .p-datepicker-select-year{
@@ -133,16 +140,16 @@ color: var(--white);
 .hours-box {
   flex: 1;
   padding: 1rem;
-  margin-right: 2rem;
   background-color: #f9f9f9;
   border-radius: 8px;
-height: 200px;
-  max-width: 300px;
+  max-width: 500px;
+  height: 200px;
 }
 
-.opening-hours-text{
-  color: rgb(9, 76, 69) ;
+.opening-hours-text {
+  color: rgb(9, 76, 69);
 }
+
 .hours-box h3 {
   margin-bottom: 1rem;
   font-size: 2rem;
@@ -154,25 +161,20 @@ height: 200px;
   line-height: 1.5;
 }
 
-
-
-/* Media Query for screens smaller than 1000px */
-@media (max-width: 1000px) {
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .calendar-box {
     flex-direction: column;
-
-
+    gap: 1rem;
   }
 
-  .calendar .p-datepicker {
-    width: 100%;
-    margin: auto;
+  .calendar {
+    max-width: 100%;
   }
 
   .hours-box {
-    width: 100%;
+    max-width: 100%;
     margin: auto;
   }
 }
-
 </style>
