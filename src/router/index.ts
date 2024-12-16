@@ -7,6 +7,7 @@ import SearchPage from '@/views/SearchPage.vue'
 import Card2Page from '../views/Card2Page.vue'
 import Card3Page from '../views/Card3Page.vue'
 import Card4Page from '../views/Card4Page.vue'
+import ReadMore from '@/views/ReadMore.vue'
 
 const routes = [
   {
@@ -49,7 +50,12 @@ const routes = [
     name: 'Search',
     component: SearchPage,
     meta: { hideNavbar: true },
-  }
+  },
+  {
+    path: '/readmore',
+    name: 'Read more',
+    component: ReadMore,
+  },
 ]
 
 const router = createRouter({
