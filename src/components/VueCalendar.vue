@@ -9,7 +9,7 @@
       <!-- Box with opening hours on the right side -->
       <div class="hours-box">
         <h3>Our Opening Hours</h3>
-        <p>{{ openingHoursText }}</p>
+        <p v-html="openingHoursText" class="opening-hours-text"></p>
       </div>
     </div>
   </div>
@@ -26,9 +26,9 @@ export default defineComponent({
       const selectedDate = date.value;
       const isClosed = selectedDate.getDate() === 24 && selectedDate.getMonth() === 11;
       if (isClosed) {
-        return `Friday ${selectedDate.getDate()} December\nThe park is closed on this day.`;
+        return `Friday ${selectedDate.getDate()} December<br>The park is closed on this day.`;
       } else {
-        return `Friday ${selectedDate.getDate()} December\nWe are open as usual.`;
+        return `Friday ${selectedDate.getDate()} December<br>We are open as usual.`;
       }
     });
 
@@ -40,14 +40,21 @@ export default defineComponent({
 });
 </script>
 
-<style >
+<style>
+
+
+
 
 /* Container for centering the content */
 .container {
   display: flex;
+  justify-content: space-between;
+
   height: 70vh;
+  width: 100%;
   background-color: rgb(153, 216, 165);
   flex-direction: column;
+  margin-bottom: 2rem;
 }
 
 /* Box containing the calendar and the opening hours */
@@ -129,10 +136,13 @@ color: var(--white);
   margin-right: 2rem;
   background-color: #f9f9f9;
   border-radius: 8px;
-height: 150px;
-  max-width: 500px;
+height: 200px;
+  max-width: 300px;
 }
 
+.opening-hours-text{
+  color: rgb(9, 76, 69) ;
+}
 .hours-box h3 {
   margin-bottom: 1rem;
   font-size: 2rem;
@@ -141,6 +151,7 @@ height: 150px;
 
 .hours-box p {
   font-size: 1.5rem;
+  line-height: 1.5;
 }
 
 
