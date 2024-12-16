@@ -3,30 +3,20 @@
       <Navbar />
       <HeroSection />
       <Links/>
-      <HorizontalCards />
+      <HorizontalCards :cards="cardData"/>
       <HorizontalCards2 />
       <Footer />
     </div>
   </template>
 
-  <script lang="ts">
+  <script setup lang="ts">
   import Navbar from '@/components/Navbar.vue';
   import HeroSection from '@/components/HeroSection.vue';
   import Links from '@/components/Links.vue';
   import HorizontalCards from '@/components/HorizontalCards.vue';
   import HorizontalCards2 from '@/components/HorizontalCards2.vue';
+  import { cardData } from '../data/cardsData';
   import Footer from '@/components/Footer.vue';
-
-  export default {
-    components: {
-      Navbar,
-      HeroSection,
-      Links,
-      HorizontalCards,
-      HorizontalCards2,
-      Footer,
-    },
-  };
   </script>
 
 
