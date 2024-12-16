@@ -8,7 +8,7 @@
       <div class="card" @click="goToCardDetails(card.id)">
         <!-- Card Image -->
         <img class="card-image" :src="card.image" />
-        <!-- Card Image -->
+        <!-- Card Title -->
         <h3>{{ card.title }}</h3>
         <!-- Card Content -->
         <p>{{ card.content }}</p>
@@ -75,15 +75,31 @@ export default defineComponent({
 }
 
 .card {
-  background-color: #f4f4f4;
-  padding: 2rem;
-  height: 300px;
-  width: 200px;
+  display: flex;
+  
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  
+  height: 28rem;
+  width: 18rem;
   text-align: center;
-  border: 1px solid #ddd;
+  
+  border-radius: 1rem;
   padding: auto;
   transition: transform 0.3s ease; /* Add smooth transition */
   cursor: pointer;
+}
+
+.card h3{
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.card-image {
+  width: 18rem;
+  height: 20rem;
+  border-radius: 1rem 1rem 0 0;
 }
 
 .card:hover {
