@@ -5,7 +5,7 @@
       v-for="card in cards"
       :key="card.id"
     >
-      <div class="card">
+      <div class="card" @click="goToCardDetails(card.id)">
         <!-- Card Image -->
         <img class="card-image" :src="card.image" />
         <!-- Card Image -->
@@ -20,8 +20,10 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from 'vue';
+import { useRouter } from 'vue-router';
+
 interface Card {
-  [x: string]: string | number | undefined;
   id: number | string;
   title: string;
   content: string;
@@ -29,14 +31,31 @@ interface Card {
   additionalText?: string;
 }
 
-export default {
+export default defineComponent({
   props: {
     cards: {
       type: Array as () => Card[],
       required: true,
     },
   },
-};
+  setup() {
+    const router = useRouter();
+
+    const goToCardDetails = (id: number | string) => {
+      if (id === 1) {
+        router.push('/tickets'); // Navigate to TicketsPage for Card 1
+      } else if (id === 2) {
+        router.push('/card2'); // Navigate to Card2Page for Card 2
+      } else if (id === 3) {
+        router.push('/card3'); // Navigate to Card3Page for Card 3
+      } else if (id === 4) {
+        router.push('/card4'); // Navigate to Card4Page for Card 4
+      }
+    };
+
+    return { goToCardDetails };
+  },
+});
 </script>
 
 <style scoped>
@@ -63,6 +82,13 @@ export default {
   text-align: center;
   border: 1px solid #ddd;
   padding: auto;
+  transition: transform 0.3s ease; /* Add smooth transition */
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Make card 5% bigger on hover */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add subtle shadow on hover */
 }
 
 @media (max-width: 375px) {
