@@ -62,13 +62,19 @@ export default {
   font-weight: bold;
   cursor: pointer;
   color: white;
+  padding: 0.8rem;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
 
 .logo:hover {
-  color: var(--orange); /* Optional hover effect */
+  /* color: var(--orange); */ /* Optional hover effect */
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -3000;
+  
 }
+
+
 
 .search-icon {
   position: fixed;

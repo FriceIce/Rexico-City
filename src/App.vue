@@ -1,11 +1,13 @@
 <script setup lang="ts">
+import { useRoute } from 'vue-router'
 import Navbar from './components/Navbar.vue';
+const route = useRoute()
 import Footer from '../src/components/Footer.vue'
 </script>
 
 <template>
   <div id="app">
-    <Navbar />
+    <Navbar v-if="!route.meta.hideNavbar"/>
    
     <transition name="slide-right">
       <router-view />

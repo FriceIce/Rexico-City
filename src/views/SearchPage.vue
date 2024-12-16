@@ -19,13 +19,26 @@
 import { defineComponent, ref, computed } from 'vue';
 import { useRouter } from 'vue-router';
 import HorizontalCards from '@/components/HorizontalCards.vue';
+import Navbar from '../components/Navbar.vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import {cardData} from '../data/cardsData'
-import type { Card } from '../types/types'
+/* import type { Card } from '../types/types' */
 
-const hideNavbarRoutes = ['Search'];
+/* const hideNavbarRoutes = ['Search']; */
+
+export interface Card {
+
+id: number;
+
+title: string;
+
+content: string;
+
+image?: string;
+
+}
 
 // Add the X icon to FontAwesome's library
 library.add(faXmark);
@@ -104,7 +117,7 @@ export default defineComponent({
  
 }
 
-.card-list {
+.cards-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
