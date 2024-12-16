@@ -1,5 +1,6 @@
 <template>
   <header class="navbar">
+    
     <nav>
       <div class="search-icon" @click="goToSearch">
         <font-awesome-icon icon="magnifying-glass" />
@@ -24,6 +25,7 @@ import { useRouter } from 'vue-router'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import router from '@/router';
 
 library.add(faMagnifyingGlass)
 
@@ -36,7 +38,6 @@ export default {
   setup() {
     const isMenuOpen = ref(false);
     const router = useRouter()
-
     const toggleMenu = () => { isMenuOpen.value = !isMenuOpen.value;};
     const goToSearch = () => {router.push('/search')}
     return { isMenuOpen, toggleMenu, goToSearch };

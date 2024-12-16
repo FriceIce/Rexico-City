@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar />
+    <!-- <Navbar /> -->
     <div class="calendar-page">
       <VueCalendar />
 
@@ -10,14 +10,14 @@
 </template>
 
 <script lang="ts">
-import Navbar from '@/components/Navbar.vue';
+/* import Navbar from '@/components/Navbar.vue'; */
 import VueCalendar from '@/components/VueCalendar.vue';
 /* import Footer from '@/components/Footer.vue'; */
 
 
 export default {
   components: {
-    Navbar,
+    /* Navbar, */
     VueCalendar,
     /* Footer, */
 

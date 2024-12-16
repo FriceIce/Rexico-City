@@ -8,7 +8,7 @@
       class="search-bar"
       placeholder="What are you looking for?"
     />
-    <div v-if="filteredCards.length" class="cards-list">
+    <div class="cards-list">
       <HorizontalCards :cards="filteredCards" />
     </div>
    
@@ -24,6 +24,8 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import {cardData} from '../data/cardsData'
 import type { Card } from '../types/types'
+
+const hideNavbarRoutes = ['Search'];
 
 // Add the X icon to FontAwesome's library
 library.add(faXmark);

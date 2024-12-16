@@ -1,6 +1,6 @@
 <template>
     <div>
-      <Navbar />
+      <!-- <Navbar /> -->
       <HeroSection />
       <Links/>
       <HorizontalCards :cards="cardData"/>
@@ -10,7 +10,7 @@
   </template>
 
   <script setup lang="ts">
-  import Navbar from '@/components/Navbar.vue';
+ /*  import Navbar from '@/components/Navbar.vue'; */
   import HeroSection from '@/components/HeroSection.vue';
   import Links from '@/components/Links.vue';
   import HorizontalCards from '@/components/HorizontalCards.vue';

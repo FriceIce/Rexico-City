@@ -48,6 +48,7 @@ const routes = [
     path: '/search',
     name: 'Search',
     component: SearchPage,
+    meta: { hideNavbar: true },
   }
 ]
 
