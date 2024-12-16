@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
   <section class="text-white max-w-[960px] w-[90%] mx-auto">
     <div class="p-4">
       <header
@@ -14,7 +14,7 @@
         </p>
         <div class="space-y-4">
           <h3 class="text-2xl font-bold">
-            By navigation through out buttons you can see tickets and calender days
+            By navigation through our buttons you can see tickets, calender days and search
           </h3>
           <div class="">
             <p>We have different offers for every season</p>
