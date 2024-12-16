@@ -13,7 +13,7 @@ defineProps<{
 <template>
   <section v-if="nextStep && data" class="flex flex-col items-center gap-6 w-full max-w-[610px]">
     <div class="bg-[#1b5240] text-white w-full py-8 px-4 rounded">
-      <h3 class="text-3xl">Summary</h3>
+      <h3 class="text-3xl pb-6">Summary</h3>
       <div class="space-y-5">
         <div class="flex items-center gap-4 justify-between">
           <div class="flex items-center gap-3">
@@ -36,7 +36,7 @@ defineProps<{
               ${showSummary ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`"
         >
           <ul
-            :class="`space-y-4 overflow-hidden border-b transition-all duration-200 ease-in-out ${showSummary && 'py-6'}`"
+            :class="`space-y-4 overflow-hidden border-b transition-all duration-200 ease-linear ${showSummary && 'pb-6'}`"
           >
             <li v-for=", in Array(ticketCounter)" class="flex gap-2 justify-between">
               <p class="ml-11">{{ data.cardType }}</p>
