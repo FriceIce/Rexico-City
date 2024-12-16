@@ -1,0 +1,7 @@
+{
+  "advisories": {
+    "GHSA-5j4c-8p2g-v4jx": {
+      "ignore": true
+    }
+  }
+}
