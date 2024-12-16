@@ -40,7 +40,7 @@
         </div>
         <div>
           <section class="text-white mt-20" id="contact">
-            <h2 class="text-4xl font-bold text-white text-left mb-4 px-4 xl:pl-16">
+            <h2 class="text-4xl font-bold text-white text-center mb-4 px-4 xl:pl-16">
               Contact Rexico for futher questions
             </h2>
             <div
