@@ -4,8 +4,8 @@
       <HeroSection />
       <Links/>
       <HorizontalCards :cards="cardData"/>
-      <HorizontalCards2 />
-      <Footer />
+      <!-- <HorizontalCards2 /> -->
+      <!-- <Footer /> -->
     </div>
   </template>
 
@@ -14,9 +14,9 @@
   import HeroSection from '@/components/HeroSection.vue';
   import Links from '@/components/Links.vue';
   import HorizontalCards from '@/components/HorizontalCards.vue';
-  import HorizontalCards2 from '@/components/HorizontalCards2.vue';
+ /*  import HorizontalCards2 from '@/components/HorizontalCards2.vue'; */
   import { cardData } from '../data/cardsData';
-  import Footer from '@/components/Footer.vue';
+  /* import Footer from '@/components/Footer.vue'; */
   </script>
 
 

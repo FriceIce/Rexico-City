@@ -6,8 +6,14 @@
       :key="card.id"
     >
       <div class="card">
+        <!-- Card Image -->
+        <img class="card-image" :src="card.image" />
+        <!-- Card Image -->
         <h3>{{ card.title }}</h3>
+        <!-- Card Content -->
         <p>{{ card.content }}</p>
+        <!-- Additional Text -->
+        <p class="additional-text">{{ card.additionalText }}</p>
       </div>
     </div>
   </div>
@@ -15,9 +21,12 @@
 
 <script lang="ts">
 interface Card {
+  [x: string]: string | number | undefined;
   id: number | string;
   title: string;
   content: string;
+  image: string;
+  additionalText?: string;
 }
 
 export default {
@@ -38,7 +47,7 @@ export default {
   overflow-x: auto;
   display: flex;
   gap: 1rem;
-  justify-content: flex-start;  
+  justify-content: center;  
   align-items: center;
 }
 
