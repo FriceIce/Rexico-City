@@ -4,9 +4,13 @@
     <nav>
       <div class="search-icon" @click="goToSearch">
         <font-awesome-icon icon="magnifying-glass" />
-        
       </div>
-      <div class="logo"></div>
+
+      <!-- Logo (Rexico City) -->
+      <div class="logo" @click="goToHome">
+        Rexico City
+      </div>
+      
       <div class="hamburger" @click="toggleMenu">
         ☰ 
       </div>
@@ -40,7 +44,10 @@ export default {
     const router = useRouter()
     const toggleMenu = () => { isMenuOpen.value = !isMenuOpen.value;};
     const goToSearch = () => {router.push('/search')}
-    return { isMenuOpen, toggleMenu, goToSearch };
+    const goToHome = () => {
+      router.push('/')
+    }
+    return { isMenuOpen, toggleMenu, goToSearch, goToHome };
   },
 };
 </script>
@@ -48,9 +55,19 @@ export default {
 <style scoped>
 .logo {
   position: absolute;
-  top: 0.9rem;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.logo:hover {
+  color: var(--orange); /* Optional hover effect */
 }
 
 .search-icon {
