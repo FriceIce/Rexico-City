@@ -9,7 +9,7 @@
       <!-- Box with opening hours on the right side -->
       <div class="hours-box">
         <h3>Our Opening Hours</h3>
-        <p>{{ openingHoursText }}</p>
+        <p v-html="openingHoursText" class="opening-hours-text"></p>
       </div>
     </div>
   </div>
@@ -26,9 +26,9 @@ export default defineComponent({
       const selectedDate = date.value;
       const isClosed = selectedDate.getDate() === 24 && selectedDate.getMonth() === 11;
       if (isClosed) {
-        return `Friday ${selectedDate.getDate()} December\nThe park is closed on this day.`;
+        return `Friday ${selectedDate.getDate()} December<br>The park is closed on this day.`;
       } else {
-        return `Friday ${selectedDate.getDate()} December\nWe are open as usual.`;
+        return `Friday ${selectedDate.getDate()} December<br>We are open as usual.`;
       }
     });
 
@@ -40,20 +40,27 @@ export default defineComponent({
 });
 </script>
 
-<style >
+<style>
+
+
+
 
 /* Container for centering the content */
 .container {
   display: flex;
+  justify-content: space-between;
 
   height: 70vh;
-  background-color: rgb(122, 176, 132);
+  width: 100%;
+  background-color: rgb(153, 216, 165);
   flex-direction: column;
+  margin-bottom: 2rem;
 }
 
 /* Box containing the calendar and the opening hours */
 .calendar-box {
   display: flex;
+ margin: auto;
   gap: 2rem;
   height: 200px;
   height: auto;
@@ -64,7 +71,6 @@ export default defineComponent({
 
 /* Calendar style */
 .calendar  {
-  background-color: white;
   border-radius: 8px;
   height: 300px;
   width: 500px;
@@ -81,17 +87,62 @@ export default defineComponent({
 }
 
 
+.p-datepicker-header{
+  margin-bottom: 2rem;
+
+}
+.p-datepicker-title{
+  background-color: var(--green);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 8px
+  ;
+}
+.p-datepicker-day:hover{
+background-color: var(--green);
+color: var(--white);
+}
+.p-datepicker-select-month {
+  font-size: 1.5rem;
+
+}
+.p-datepicker-select-year{
+ display: none;
+}
+
+.p-icon.p-button-icon{
+  color: var(--white);
+  background-color: var(--green);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 8px
+}
+
+.p-datepicker-day-cell.p-datepicker-other-month {
+  color: #0000008f;
+}
+.p-datepicker-weeknumber{
+  display:none ;
+}
+.p-datepicker-weekheader.p-disabled{
+  display:none;
+}
+
+
 /* Opening hours box */
 .hours-box {
   flex: 1;
-  border: 1px solid #ddd;
   padding: 1rem;
+  margin-right: 2rem;
   background-color: #f9f9f9;
   border-radius: 8px;
-height: 150px;
-  max-width: 500px;
+height: 200px;
+  max-width: 300px;
 }
 
+.opening-hours-text{
+  color: rgb(9, 76, 69) ;
+}
 .hours-box h3 {
   margin-bottom: 1rem;
   font-size: 2rem;
@@ -100,12 +151,10 @@ height: 150px;
 
 .hours-box p {
   font-size: 1.5rem;
+  line-height: 1.5;
 }
 
-.p-datepicker-header{
-  margin: 1rem;
 
-}
 
 /* Media Query for screens smaller than 1000px */
 @media (max-width: 1000px) {
