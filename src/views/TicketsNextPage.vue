@@ -13,7 +13,7 @@ const showSummary = ref<boolean>(true)
 const setShowSummary = () => (showSummary.value = !showSummary.value)
 
 const setNextStep = () => {
-  if (!nextStep) showSummary.value = true // This sets showSummary state to true, ensuring that the "summary-list" is alwasy open when the user initially enters the <PurchaseSummary /> component.
+  showSummary.value = true // This sets showSummary state to true, ensuring that the "summary-list" is alwasy open when the user initially enters the <PurchaseSummary /> component.
   nextStep.value = !nextStep.value
 }
 
@@ -94,7 +94,7 @@ const { data, isLoading, isError } = useQuery<Product>({
           <button
             :disabled="ticketCounter === 0"
             :class="`bg-[#006649] text-white w-full py-[12px] rounded-full ${ticketCounter === 0 && 'opacity-50 cursor-not-allowed'}`"
-            @click="nextStep = !nextStep"
+            @click="setNextStep()"
           >
             Next step
           </button>
