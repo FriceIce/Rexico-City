@@ -1,13 +1,18 @@
 <script setup lang="ts">
 /* import Navbar from './components/Navbar.vue'; */
+import Footer from '../src/components/Footer.vue'
 </script>
 
 <template>
   <div id="app">
-  
+   <!--  <Navbar /> -->
+   
     <transition name="slide-right">
       <router-view />
     </transition>
+
+    <Footer/>
+    
   </div>
 </template>
 <style >

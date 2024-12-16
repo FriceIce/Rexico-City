@@ -5,21 +5,21 @@
       <VueCalendar />
 
     </div>
-    <Footer />
+    <!-- <Footer /> -->
   </div>
 </template>
 
 <script lang="ts">
 import Navbar from '@/components/Navbar.vue';
 import VueCalendar from '@/components/VueCalendar.vue';
-import Footer from '@/components/Footer.vue';
+/* import Footer from '@/components/Footer.vue'; */
 
 
 export default {
   components: {
     Navbar,
     VueCalendar,
-    Footer,
+    /* Footer, */
 
   },
 };
