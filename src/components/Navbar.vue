@@ -3,10 +3,11 @@
     <nav>
       <div class="search-icon" @click="goToSearch">
         <font-awesome-icon icon="magnifying-glass" />
+        
       </div>
       <div class="logo"></div>
       <div class="hamburger" @click="toggleMenu">
-        ☰
+        ☰ 
       </div>
       <ul :class="{ open: isMenuOpen }">
         <li><a href="#">Home</a></li>
@@ -52,15 +53,44 @@ export default {
 }
 
 .search-icon {
-  position: absolute;
-  top: 0.8rem;
-  left: 1rem;
-  font-size: 1rem;
+  position: fixed;
+  top: -0.1rem;
+  left: 0.1rem;
+  font-size: 1.2rem;
   cursor: pointer;
   z-index: 1001;
+  padding: 0.8rem;
+  transition: background-color 0.3s ease;
+  width: 4rem;
+  text-align: center;
+}
+
+.search-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0rem;
+}
+
+.hamburger {
+  position: fixed;
+  display: block;
+  right: 0.1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.8rem;
+  transition: background-color 0.3s ease;
+  z-index: 1001;
+  width: 4rem;
+  text-align: center; /* Added to center the icon */
+}
+
+.hamburger:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0rem;
 }
 
 .navbar {
+  display: flex;
+  justify-content: center;
   height: 3rem;
   position: sticky;
   top: 0;
@@ -68,7 +98,10 @@ export default {
   color: white;
   padding: 1rem;
   z-index: 1000;
+  
 }
+
+
 
 nav {
   display: flex;
@@ -106,14 +139,8 @@ ul li a:hover {
   color: var(--orange);
 }
 
-.hamburger {
-  position: fixed;
-  top: 0.5rem;
-  right: 1.2rem;
-  display: block;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
+
+
 
 
 
