@@ -109,10 +109,11 @@ export default defineComponent({
 
 @media (max-width: 375px) {
   .cards-container {
+    display: flex;
+    flex-direction: column;
     justify-content: center;  
    /*  border: 2px solid pink; */
-    height: 19.1rem;
-    overflow-y: hidden;
+    overflow-y: scroll;
   }
 }
 </style>
