@@ -159,7 +159,7 @@ const selectedPayment = ref<string | null>(null)
 .hero {
   position: relative;
   overflow: hidden;
-  height: 110rem;
+  height: 120rem;
 }
 
 .hero-content {
