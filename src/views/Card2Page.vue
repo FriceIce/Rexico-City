@@ -39,7 +39,7 @@
         </tr>
         <tr>
           <th class="highlight">Attraction Type</th>
-          <td class="highlight">Super Swing</td>
+          <td class="highlight">Rollercoaster</td>
         </tr>
         <tr>
           <th>Height Requirement</th>
@@ -108,7 +108,7 @@ export default defineComponent({
   margin: auto;
 }
 
-/* Textbeskrivning */
+
 .description {
   max-width: 800px;
   margin: 0 auto;
@@ -118,7 +118,7 @@ export default defineComponent({
   padding-bottom: 2rem;
 }
 
-/* Tabell-styling */
+
 .table-container {
   margin: 2rem auto;
   max-width: 800px;
@@ -159,7 +159,7 @@ th.highlight {
 
 }
 
-/* Varannan rad styling */
+
 tr:nth-child(odd) {
   background-color: #fff;
 }
