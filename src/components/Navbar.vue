@@ -1,7 +1,7 @@
 <template>
   <header class="navbar">
     <nav class="relative">
-      <ShoppingCart v-if="openShoppingCart" />
+      <ShoppingCart v-if="store.openShoppingCart" />
 
       <div class="search-icon" @click="goToSearch">
         <font-awesome-icon icon="magnifying-glass" />
@@ -10,10 +10,10 @@
       <!-- Logo (Rexico City) -->
       <div class="logo" @click="goToHome">Rexico City</div>
 
-      <div class="flex gap-4 items-center">
+      <div class="flex gap-6 items-center">
         <div
           :class="`relative ${store.shoppingCart.length === 0 && 'hidden'}`"
-          @click="openShoppingCart = !openShoppingCart"
+          @click="store.openShoppingCart = !store.openShoppingCart"
         >
           <img src="/images/shopping_cart.svg" alt="shopping cart" class="size-5 cursor-pointer" />
           <div
@@ -56,7 +56,6 @@ export default {
   },
   setup() {
     const isMenuOpen = ref(false)
-    const openShoppingCart = ref<boolean>(false)
     const router = useRouter()
     const store = useShoppingCartStore()
     const toggleMenu = () => {
@@ -75,7 +74,6 @@ export default {
       goToSearch,
       goToHome,
       store,
-      openShoppingCart,
     }
   },
 }
@@ -122,11 +120,11 @@ export default {
 
 .hamburger {
   position: static;
-  display: block;
+  /* display: block; */
   right: 0.1rem;
   font-size: 1.5rem;
   cursor: pointer;
-  padding: 0.8rem;
+  /* padding: 0.8rem; */
   transition: background-color 0.3s ease;
   z-index: 1001;
   width: 4rem;
@@ -189,12 +187,13 @@ ul li a:hover {
 
 @media (max-width: 375px) {
   .hamburger {
-    position: fixed;
+    position: static;
     top: 0.5rem;
     right: 0.8rem;
     display: block;
     font-size: 1.5rem;
     cursor: pointer;
+    width: auto;
   }
 
   ul {
