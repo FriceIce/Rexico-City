@@ -43,7 +43,7 @@ export default defineComponent({
 <style>
 .calendar-page{
   display: flex;
-  
+
   align-items: center;
   height: 100vh;
 
@@ -55,7 +55,7 @@ export default defineComponent({
   height: auto;
   width: 100%;
   margin: 0 auto;
-  background-color: rgb(153, 216, 165);
+  background-color: rgb(83, 168, 130);
   flex-direction: column;
   margin-bottom: 2rem;
   padding: 1rem;
