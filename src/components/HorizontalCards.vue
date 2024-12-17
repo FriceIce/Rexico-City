@@ -60,14 +60,18 @@ export default defineComponent({
 
 <style scoped>
 .cards-container {
+  
   padding: 5rem;
-  width: 80%;
+  width: 80rem;
+  height: 30rem;
   margin: 0 auto;
   overflow-x: auto;
   display: flex;
   gap: 1rem;
   justify-content: center;  
   align-items: center;
+ /*  border: 2px solid pink; */
+  margin-bottom: 3rem;
 }
 
 .cards {

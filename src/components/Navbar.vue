@@ -138,14 +138,15 @@ export default {
 
 .navbar {
   display: flex;
-  justify-items: justify-bewteen;
+  justify-content: center;
   height: 3rem;
   position: sticky;
-  top: 0;
+  
   background-color: var(--green);
   color: white;
   padding: 1rem;
   z-index: 1000;
+  /* border: 2px solid pink; */
 }
 
 nav {
@@ -153,6 +154,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  
 }
 
 ul {

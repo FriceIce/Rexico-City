@@ -50,7 +50,7 @@ export default {
 }
 
 .hero-content img {
-  margin-top: 2rem;
+  margin-top: 3rem;
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -75,7 +75,7 @@ export default {
   height: 6rem;
   width: 7rem;
   margin: 0 auto;
-  margin-top: 3.5rem;
+  margin-top: 2rem;
   transition: all 0.3s ease;
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
