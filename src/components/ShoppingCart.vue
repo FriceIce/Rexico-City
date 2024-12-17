@@ -62,9 +62,11 @@
         >
           To payment
         </button>
-        <button class="py-[10px] bg-white text-[#2a7056] rounded-full border-2 border-[#2a7056]">
-          Continue shopping
+        <router-link to="/tickets" class="py-[10px] bg-white text-[#2a7056] rounded-full border-2 border-[#2a7056] flex justify-center" >
+        <button>
+           Continue shopping
         </button>
+        </router-link>
       </div>
     </div>
   </section>

@@ -9,7 +9,7 @@ const route = useRoute()
 <template>
   <div id="app relative">
     <Navbar v-if="!route.meta.hideNavbar" />
-    <!-- <ShoppingCart /> -->
+    <ShoppingCart />
     <transition name="slide-right">
       <router-view />
     </transition>
