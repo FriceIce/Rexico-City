@@ -57,11 +57,12 @@ defineProps<{
       >
         Back
       </button>
+      <router-link to="/ToPayment" class="flex-1 bg-[#2a7056] text-white py-[10px] rounded-full border-2 border-[#2a7056] flex justify-center" >
       <button
-        class="flex-1 bg-[#2a7056] text-white py-[10px] rounded-full border-2 border-[#2a7056]"
       >
         Add to cart
       </button>
+    </router-link>
     </div>
   </section>
 </template>
