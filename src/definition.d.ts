@@ -27,4 +27,11 @@ type Product = {
   cardType: string
   description: string
   includes: string[]
+  amount?: number
+}
+
+type ShoppingCart = {
+  shoppingCart: Array<Product>
+  itemsCount: number
+  total: number
 }
