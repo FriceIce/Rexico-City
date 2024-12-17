@@ -24,6 +24,7 @@ type Product = {
   id: number
   title: string
   price: number
+  src: string
   cardType: string
   description: string
   includes: string[]
@@ -34,4 +35,5 @@ type ShoppingCart = {
   shoppingCart: Array<Product>
   itemsCount: number
   total: number
+  openShoppingCart: boolean
 }
