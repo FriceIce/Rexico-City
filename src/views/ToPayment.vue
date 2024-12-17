@@ -28,19 +28,19 @@ const selectedPayment = ref<string | null>(null)
       <button class="djunglebutton">Shopping Cart</button>
 
       <div class="pl-6 pt-6 pb-12 mt-7 bg-orange-400 w-3/4 rounded-xl mx-auto">
-        <h2 class="text-white text-3xl pb-6">Your Cart</h2>
+        <h2 class="text-white text-3xl pb-10 text-center">Your Cart</h2>
         <article class="flex justify-around">
-          <p class="text-white">Article</p>
-          <p class="text-white">Price</p>
-          <p class="text-white">Quantity</p>
-          <p class="text-white">Sum</p>
+          <p class="text-white text-xl">Article</p>
+          <p class="text-white text-xl">Price</p>
+          <p class="text-white text-xl">Quantity</p>
+          <p class="text-white text-xl">Sum</p>
         </article>
 
         <ul class="flex justify-around">
-          <li>Dino Card</li>
-          <li>420/st</li>
-          <li>3</li>
-          <li>1260</li>
+          <li class="text-xl">Dino Card</li>
+          <li class="text-xl">420/st</li>
+          <li class="text-xl">3</li>
+          <li class="text-xl">1260</li>
           <!-- <button @click="removeItem" class="">X</button> -->
         </ul>
       </div>
@@ -135,7 +135,7 @@ const selectedPayment = ref<string | null>(null)
         </div>
         <div class="text-2xl font-bold my-2">1260 kr</div>
         <button
-          class="bg-black text-white w-full py-3 rounded text-lg font-semibold hover:bg-gray-900 transition-colors"
+          class="bg-black text-white w-full py-3 rounded text-lg font-semibold hover:bg-gray-900 transition-colors cursor-pointer"
           :disabled="!selectedPayment || !selectedDelivery"
         >
           Betala köp
