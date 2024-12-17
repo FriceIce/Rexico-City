@@ -9,6 +9,7 @@ import Card3Page from '../views/Card3Page.vue'
 import Card4Page from '../views/Card4Page.vue'
 import ReadMore from '@/views/ReadMore.vue'
 import ToPayment from '../views/ToPayment.vue'
+import BuyCompleted from '@/views/BuyCompleted.vue'
 
 const routes = [
   {
@@ -61,6 +62,11 @@ const routes = [
     path: '/topayment',
     name: 'To Payment',
     component: ToPayment,
+  },
+  {
+    path: '/buycompleted',
+    name: 'Buy Completed',
+    component: BuyCompleted,
   },
 ]
 
