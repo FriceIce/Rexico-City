@@ -14,8 +14,6 @@
           <p class="text-white">Sum</p>
           </article>
         </div>
-
-
     </div>
     <div class="flex justify-center">
           <h2 class="text-white text-3xl pb-12">+ Presentkort/Rabattkod</h2>
