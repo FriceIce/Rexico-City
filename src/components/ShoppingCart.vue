@@ -57,11 +57,13 @@
     </div>
     <div class="">
       <div class="flex flex-col gap-2">
+        <router-link to="/ToPayment">
         <button
           class="py-[10px] bg-[#2a7056] text-white rounded-full w-full border-2 border-[#2a7056]"
         >
           To payment
         </button>
+      </router-link>
         <router-link to="/tickets" class="py-[10px] bg-white text-[#2a7056] rounded-full border-2 border-[#2a7056] flex justify-center" >
         <button>
            Continue shopping

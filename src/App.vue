@@ -2,7 +2,7 @@
 import { useRoute } from 'vue-router'
 import Navbar from './components/Navbar.vue'
 import Footer from '../src/components/Footer.vue'
-import ShoppingCart from '@/components/ShoppingCart.vue'
+// import ShoppingCart from '@/components/ShoppingCart.vue'
 const route = useRoute()
 </script>
 
