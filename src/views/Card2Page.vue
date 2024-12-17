@@ -1,14 +1,9 @@
 <template>
   <div class="card-page">
-    <!-- Större rubrik -->
     <h1 class="main-title">DINO RIDE</h1>
-
-    <!-- Första bilden -->
     <div class="image-container">
       <img src="../assets/images/dino_ride.png" alt="Dino Ride 2" class="responsive-image" />
     </div>
-
-    <!-- Längre text -->
     <div class="description">
       <p>
       <h2>Dino ride - premiere in 2025! 🫨🫧</h2>
@@ -30,12 +25,11 @@
       </p>
     </div>
 
-    <!-- Andra bilden -->
+
     <div class="image-container">
       <img src="../assets/images/dino_ride.png" alt="Dino Ride 2" class="responsive-image" />
     </div>
 
-    <!-- Fakta om Pumpen Tabell -->
     <div class="table-container">
       <h3>Facts About Dino Ride</h3>
       <table>
@@ -62,7 +56,7 @@
       </table>
     </div>
 
-    <!-- Tillbaka knapp -->
+
     <button @click="goBack">Back to Home</button>
   </div>
 </template>
@@ -154,7 +148,7 @@ td {
 
 th {
   font-weight: bold;
-  background-color: #f9f9f9;
+  background-color: #fff;
   font-size: 1.2rem;
 
 }

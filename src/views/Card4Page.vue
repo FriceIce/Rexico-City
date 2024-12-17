@@ -131,7 +131,7 @@ h1{
   display: flex;
   justify-content: center;
   position: relative;
-  flex-wrap: wrap;  /* Allows wrapping of pricing cards on smaller screens */
+  flex-wrap: wrap;
 }
 
 .burger-container img {
@@ -141,7 +141,7 @@ h1{
   object-fit: cover;
 }
 
-/* Default Styles for Larger Screens */
+
 .pricing-container {
   display: flex;
   gap: 20px;
@@ -225,7 +225,6 @@ button:hover {
   background-color: var(--green);
 }
 
-/* Media Query for smaller screens (max-width: 768px) */
 @media (max-width: 768px) {
   .top-image-container {
     flex-direction: column;
@@ -261,6 +260,5 @@ button:hover {
     width: 100%;
   }
 }
-
 
 </style>
