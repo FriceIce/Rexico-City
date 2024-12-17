@@ -1,6 +1,8 @@
 <template>
   <header class="navbar">
-    <nav>
+    <nav class="relative">
+      <ShoppingCart v-if="openShoppingCart" />
+
       <div class="search-icon" @click="goToSearch">
         <font-awesome-icon icon="magnifying-glass" />
       </div>
@@ -8,7 +10,20 @@
       <!-- Logo (Rexico City) -->
       <div class="logo" @click="goToHome">Rexico City</div>
 
-      <div class="hamburger" @click="toggleMenu">☰</div>
+      <div class="flex gap-4 items-center">
+        <div
+          :class="`relative ${store.shoppingCart.length === 0 && 'hidden'}`"
+          @click="openShoppingCart = !openShoppingCart"
+        >
+          <img src="/images/shopping_cart.svg" alt="shopping cart" class="size-5 cursor-pointer" />
+          <div
+            class="bg-[#ff97a4] text-black text-[10px] absolute top-[-8px] right-[-10px] size-[17px] rounded-full flex items-center justify-center"
+          >
+            {{ store.setItemsCount }}
+          </div>
+        </div>
+        <div class="hamburger" @click="toggleMenu">☰</div>
+      </div>
       <ul :class="{ open: isMenuOpen }">
         <li><a href="/">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -29,16 +44,21 @@ import { useRouter } from 'vue-router'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { useShoppingCartStore } from '@/stores/shoppingCartStore.ts'
+import ShoppingCart from './ShoppingCart.vue'
 
 library.add(faMagnifyingGlass)
 
 export default {
   components: {
     FontAwesomeIcon,
+    ShoppingCart,
   },
   setup() {
     const isMenuOpen = ref(false)
+    const openShoppingCart = ref<boolean>(false)
     const router = useRouter()
+    const store = useShoppingCartStore()
     const toggleMenu = () => {
       isMenuOpen.value = !isMenuOpen.value
     }
@@ -48,7 +68,15 @@ export default {
     const goToHome = () => {
       router.push('/')
     }
-    return { isMenuOpen, toggleMenu, goToSearch, goToHome }
+
+    return {
+      isMenuOpen,
+      toggleMenu,
+      goToSearch,
+      goToHome,
+      store,
+      openShoppingCart,
+    }
   },
 }
 </script>
@@ -75,7 +103,7 @@ export default {
 }
 
 .search-icon {
-  position: fixed;
+  position: static;
   top: -0.1rem;
   left: 0.1rem;
   font-size: 1.2rem;
@@ -93,7 +121,7 @@ export default {
 }
 
 .hamburger {
-  position: fixed;
+  position: static;
   display: block;
   right: 0.1rem;
   font-size: 1.5rem;
@@ -112,7 +140,7 @@ export default {
 
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-items: justify-bewteen;
   height: 3rem;
   position: sticky;
   top: 0;
@@ -126,6 +154,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 ul {
