@@ -91,7 +91,7 @@ const selectedPayment = ref<string | null>(null)
             <div class="flex-1">
               <div class="flex items-center justify-between">
                 <span class="font-medium">Betala med Klarna</span>
-                <span class="inline-block bg-pink-200 text-pink-800 text-sm font-semibold px-2 py-1 rounded">
+                <span class="inline-block bg-pink-200 text-black text-sm font-semibold px-2 py-1 rounded">
                   Klarna
                 </span>
               </div>
