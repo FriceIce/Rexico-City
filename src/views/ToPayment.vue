@@ -3,7 +3,7 @@
     <div class="hero-content">
       <img src="/src/assets/images/loggan.png" alt="Rexico City" class="hero-image" />
       <h1>Payment journey starts here</h1>
-        <button>Shopping Cart</button>
+        <button class="djunglebutton">Shopping Cart</button>
         <div class="pl-6 pt-6 pb-12">
           <h2 class="text-white text-3xl ">You Cart</h2>
 
@@ -122,16 +122,6 @@ export default {
   height: 90rem;
 }
 
-.hero-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -158,7 +148,7 @@ export default {
   text-shadow: 6px 7px 10px rgba(0, 0, 0, 0.3);
 }
 
-.hero-content button {
+.hero-content .djunglebutton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -170,8 +160,8 @@ export default {
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-button {
-  font-family: jungle;
+.djunglebutton {
+  /* font-family: jungle; */
   font-size: 1.8rem;
   border: 2px solid rgba(255, 255, 255, 0.2);
   background-color: var(--orange);
@@ -188,9 +178,7 @@ button:hover {
   border-color: rgba(255, 255, 255, 0.4);
 }
 
-button:hover {
-  background-color: rgb(224, 132, 33);
-}
+
 /* -------------------mobile v------------------------ */
 
 @media (max-width: 375px) {
@@ -230,7 +218,7 @@ button:hover {
     text-shadow: 6px 7px 10px rgba(0, 0, 0, 0.3);
   }
 
-  .hero-content button {
+  .hero-content .djunglebutton {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -242,19 +230,6 @@ button:hover {
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   }
 
-  button {
-    font-family: jungle;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    background-color: var(--orange);
-    color: white;
-    cursor: pointer;
-    border-radius: 50%;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
-    transform: translateY(0);
-  }
 }
 
 /* From Uiverse.io by zanina-yassine */
