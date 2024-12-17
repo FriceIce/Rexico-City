@@ -8,7 +8,7 @@ import image4 from '@/assets/images/burger.png'
 export const cardData = [
   { 
     id: 1, 
-    title: "XMAS SPECIAL 🎁", 
+    title: "X-MAS SPECIAL 🎁", 
     content: "",
     image: image1,
     additionalText: "GO FOR GOLD AND GET DINO CARD FOR FREE!"

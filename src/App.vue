@@ -14,7 +14,7 @@ const route = useRoute()
       <router-view />
     </transition>
 
-    <Footer />
+    <Footer/>
   </div>
 </template>
 <style>
