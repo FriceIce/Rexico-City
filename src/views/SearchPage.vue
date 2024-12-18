@@ -3,11 +3,14 @@
     <div class="close-icon" @click="goBack">
       <font-awesome-icon icon="xmark" />
     </div>
-    <input
-      v-model="searchQuery"
-      class="search-bar"
-      placeholder="What are you looking for?"
-    />
+    <div class="search-bar-container">
+      <font-awesome-icon icon="search" class="search-icon" />
+      <input
+        v-model="searchQuery"
+        class="search-bar"
+        placeholder="What are you looking for?"
+      />
+    </div>
     <div class="cards-list">
       <HorizontalCards :cards="filteredCards" />
     </div>
@@ -20,7 +23,7 @@ import { useRouter } from 'vue-router';
 import HorizontalCards from '@/components/HorizontalCards.vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faXmark, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { cardData } from '../data/cardsData';
 
 export interface Card {
@@ -30,8 +33,8 @@ export interface Card {
   image?: string;
 }
 
-// Add the X icon to FontAwesome's library
-library.add(faXmark);
+// Add the X and search icons to FontAwesome's library
+library.add(faXmark, faSearch);
 
 export default defineComponent({
   name: 'SearchPage',
@@ -47,7 +50,6 @@ export default defineComponent({
     // Computed property for filtering cards
     const filteredCards = computed(() => {
       if (!searchQuery.value.trim()) {
-        // Return an empty array if searchQuery is empty
         return [];
       }
       return cards.value.filter(
@@ -86,13 +88,34 @@ export default defineComponent({
   color: var(--white);
 }
 
-.search-bar {
+.search-bar-container {
+  position: fixed;
   width: 100%;
   max-width: 600px;
-  padding: 0rem;
+  margin-bottom: 40rem;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
   font-size: 1rem;
-  margin-bottom: 1rem;
-  box-sizing: border-box;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-bar:focus {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 .cards-list {
@@ -101,16 +124,37 @@ export default defineComponent({
   gap: 1rem;
   width: 100%;
   max-width: 600px;
+  margin-top: 10rem;
 }
 
 @media (max-width: 600px) {
+
+  .search-bar-container {
+  position: fixed;
+  width: 80%;
+  max-width: 600px;
+  margin-bottom: 30rem;
+}
   .search-bar {
     font-size: 0.875rem;
-    padding: 0rem;
+    padding: 0.5rem 0.75rem 0.5rem 2rem;
+  }
+
+  .search-icon {
+    left: 0.75rem;
   }
 
   .close-icon {
     font-size: 1.25rem;
   }
+
+  .cards-list {
+  margin-top: 9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+}
 }
 </style>
