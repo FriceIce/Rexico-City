@@ -124,7 +124,7 @@ const selectedPayment = ref<string | null>(null)
         </div>
         <p class="text-2xl font-bold mt-2">$ {{ store.setTotal }}</p>
         <button
-          class="bg-black text-white w-full py-3 rounded-lg mt-4 hover:bg-gray-500 transition disabled:bg-gray-400"
+          class="bg-black text-white w-full py-3 rounded-lg mt-4 hover:bg-pink-400 transition disabled:bg-gray-400 cursor-pointer"
           :disabled="!selectedPayment || !selectedDelivery"
         >
           Betala köp
