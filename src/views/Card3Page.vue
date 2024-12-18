@@ -103,14 +103,14 @@ export default defineComponent({
   padding: 1rem;
   box-sizing: border-box;
   max-width: 40rem;
-  height: auto;
+  min-height: 40rem;
  
   
 }
 
 .text h1 {
   font-size: 2rem;
-  margin-top: -5rem;
+  margin-top: 0rem;
 }
 
 .text h2 {
@@ -127,7 +127,7 @@ export default defineComponent({
   object-fit: cover;
   width: 100%;
   max-width: 50rem;
-  height: 40rem;
+  min-height: 40rem;
 }
 
 .cards {
@@ -224,18 +224,20 @@ button:hover {
 
 @media (max-width: 500px) {
   .container {
-    margin-top: -1rem;
+    margin-top: 0rem;
     flex-direction: column-reverse;
   }
 
   .text {
     padding: 1rem;
-    height: auto;
+    max-height: auto;
+    
   }
 
   .text h1 {
-    margin-top: 1rem;
+    margin-top: 0rem;
     font-size: 1.5rem;
+    
   }
 
   .text h2 {
@@ -248,7 +250,8 @@ button:hover {
 
   .image {
     max-width: 100%;
-    height: auto;
+    min-height: auto;
+    margin-top: 1.5rem;
   }
 
   .cards {

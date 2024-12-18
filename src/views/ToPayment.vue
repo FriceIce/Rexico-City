@@ -16,10 +16,20 @@ import visaLogo from '../assets/images/visaLogo.png'
 import bankidLogo from '../assets/images/bankidLogo.png'
 import swishLogo from '../assets/images/swishLogo.png'
 import { useShoppingCartStore } from '@/stores/shoppingCartStore.ts'
+import { useRouter} from 'vue-router'
 
 const store = useShoppingCartStore()
 const selectedDelivery = ref<string | null>(null)
 const selectedPayment = ref<string | null>(null)
+const router = useRouter()
+
+const goToBuyCompleted = () => {
+  if (selectedPayment && selectedDelivery) {
+    router.push('/buycompleted');
+  } else {
+    alert('Please select a delivery method and payment option before proceeding.');
+  }
+};
 </script>
 
 <template>
@@ -126,6 +136,7 @@ const selectedPayment = ref<string | null>(null)
         <button
           class="bg-black text-white w-full py-3 rounded-lg mt-4 hover:bg-pink-400 transition disabled:bg-gray-400 cursor-pointer"
           :disabled="!selectedPayment || !selectedDelivery"
+          @click="goToBuyCompleted"
         >
           Betala köp
         </button>
@@ -180,9 +191,6 @@ const selectedPayment = ref<string | null>(null)
   text-shadow: 6px 7px 10px rgba(0, 0, 0, 0.3);
 }
 
-.hero-image {
-
-}
 
 
 </style>
