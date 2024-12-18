@@ -183,11 +183,15 @@ ul li a:hover {
   color: var(--orange);
 }
 
-@media (max-width: 375px) {
+@media (max-width: 740px) {
   .hamburger {
     font-size: 1.5rem;
     cursor: pointer;
     /* width: auto; */
+  }
+
+  .hamburger:hover {
+    background: none;
   }
 
   ul {
