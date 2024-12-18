@@ -2,6 +2,7 @@
 import { useQuery } from '@tanstack/vue-query'
 import { useRoute } from 'vue-router'
 import { computed, ref, watch } from 'vue'
+import ShoppingCartModal from '@/components/ShoppingCartModal.vue'
 import PurchaseSummary from '@/components/PurchaseSummary.vue'
 import axios from 'axios'
 
@@ -45,7 +46,8 @@ const { data, isLoading, isError } = useQuery<Product>({
 </script>
 
 <template>
-  <main v-if="!isLoading && data && !isError" class="">
+  <main v-if="!isLoading && data && !isError" class="relative h-[calc(100dvh-104px)]">
+    <ShoppingCartModal />
     <div class="bg-white text-black w-full flex flex-col items-center p-6">
       <section v-if="!nextStep" class="space-y-16 py-[29px] md:py-20">
         <article class="space-y-8 max-w-[610px]">
