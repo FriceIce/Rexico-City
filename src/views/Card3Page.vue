@@ -72,7 +72,7 @@ export default defineComponent({
   margin-top: 2rem;
   background-color: rgb(83, 168, 130);
   height: auto;
-  padding: 1rem;
+  padding: 0rem;
 }
 
 .container {
@@ -90,7 +90,7 @@ export default defineComponent({
   justify-content: center;
   align-items: center;
   background-color: white;
-  padding: 2rem;
+  padding: 0rem;
   box-sizing: border-box;
   max-width: 100%;
 }
@@ -129,7 +129,7 @@ export default defineComponent({
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 1rem;
+  padding: 0rem;
   width: 100%;
   max-width: 300px;
   text-align: center;
@@ -162,6 +162,10 @@ button:hover {
 }
 
 @media (max-width: 1000px) {
+
+  .card-page3 {
+  padding: 1rem;
+}
   .text h1 {
     font-size: 1.8rem;
   }
@@ -181,7 +185,7 @@ button:hover {
   }
 
   .text {
-    padding: 1rem;
+    padding: 0rem;
   }
 
   .text h1 {

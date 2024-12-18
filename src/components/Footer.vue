@@ -13,7 +13,7 @@
     background-color: var(--green);
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 0rem;
     width: 100%;
     position:static;
     bottom: 0;

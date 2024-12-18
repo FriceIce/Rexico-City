@@ -57,12 +57,12 @@ const route = useRoute()
 
 /* Responsive design */
 #app {
-  padding: 20px;
+  padding: 0px;
 }
 
 @media (max-width: 768px) {
   #app {
-    padding: 10px;
+    padding: 0px;
   }
 
   Navbar, Footer {
@@ -76,7 +76,9 @@ const route = useRoute()
 
 @media (max-width: 480px) {
   #app {
-    padding: 5px;
+    padding: 0px;
+    margin: 0;
+
   }
 
   Navbar, Footer {

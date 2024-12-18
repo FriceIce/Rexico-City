@@ -89,7 +89,7 @@ export default {
   font-weight: bold;
   cursor: pointer;
   color: white;
-  padding: 0.8rem;
+  padding: 0rem;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
@@ -107,7 +107,7 @@ export default {
   font-size: 1.2rem;
   cursor: pointer;
   z-index: 1001;
-  padding: 0.8rem;
+  padding: 0rem;
   transition: background-color 0.3s ease;
   width: 4rem;
   text-align: center;
@@ -144,7 +144,7 @@ export default {
   
   background-color: var(--green);
   color: white;
-  padding: 1rem;
+  padding: 0rem;
   z-index: 1000;
   /* border: 2px solid pink; */
 }
@@ -164,7 +164,7 @@ ul {
   right: 0;
   background-color: black;
   display: none;
-  padding: 1rem;
+  padding: 0rem;
   border-radius: 0.5rem;
   transition: all 0.3s ease-in-out;
 }
@@ -205,7 +205,7 @@ ul li a:hover {
     right: 0;
     background-color: black;
     display: none;
-    padding: 1rem;
+    padding: 0rem;
     border-radius: 0.5rem;
     transition: all 0.3s ease-in-out;
   }

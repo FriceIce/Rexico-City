@@ -89,7 +89,7 @@ export default defineComponent({
 .search-bar {
   width: 100%;
   max-width: 600px;
-  padding: 0.5rem;
+  padding: 0rem;
   font-size: 1rem;
   margin-bottom: 1rem;
   box-sizing: border-box;
@@ -106,7 +106,7 @@ export default defineComponent({
 @media (max-width: 600px) {
   .search-bar {
     font-size: 0.875rem;
-    padding: 0.5rem;
+    padding: 0rem;
   }
 
   .close-icon {

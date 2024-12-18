@@ -60,7 +60,7 @@ export default defineComponent({
 
 <style scoped>
 .cards-container {
-  padding: 2rem;
+  padding: 0rem;
   width: 100%;
   margin: 0 auto;
   overflow-x: auto;

@@ -21,12 +21,12 @@ import { cardData } from '../data/cardsData';
 
 <style scoped>
 .main-container {
-  padding: 16px;
+  padding: 0rem;
 }
 
 @media (max-width: 600px) {
   .main-container {
-    padding: 8px;
+    padding: 0rem;
   }
 
   .main-container > * {
