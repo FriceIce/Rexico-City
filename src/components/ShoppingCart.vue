@@ -7,8 +7,15 @@ const store = useShoppingCartStore()
   <section
     class="fixed top-[48px] right-0 z-10 space-y-6 w-full max-w-[530px] h-full sm:h-max text-black bg-white px-2 pt-6 pb-16 shadow-xl rounded-bl-lg"
   >
-    <!-- I'll create a state and use it to display the amount of items in the shopping cart -->
-    <h1 class="text-2xl">Your cart ({{ store.setItemsCount }} articles)</h1>
+    <div class="flex items-center mx-2">
+      <h1 class="text-2xl flex-1">Your cart ({{ store.setItemsCount }} articles)</h1>
+      <button
+        class="size-5 lg:hover:scale-110"
+        @click="store.openShoppingCart = !store.openShoppingCart"
+      >
+        <img src="/images/close_btn.svg" alt="" class="size-full object-contain" />
+      </button>
+    </div>
     <div>
       <ul class="space-y-4 max-h-[calc(100vh-320px)] overflow-y-auto px-2">
         <li
