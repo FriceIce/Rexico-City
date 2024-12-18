@@ -8,7 +8,7 @@
       </div>
 
       <!-- Logo (Rexico City) -->
-      <div class="logo" @click="goToHome()">Rexico City</div>
+      <div class="logo" @click="goToHome">Rexico City</div>
 
       <div class="flex gap-6 items-center">
         <div
