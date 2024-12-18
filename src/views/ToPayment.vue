@@ -15,6 +15,8 @@ import { ref } from 'vue'
 import visaLogo from '../assets/images/visaLogo.png'
 import bankidLogo from '../assets/images/bankidLogo.png'
 import swishLogo from '../assets/images/swishLogo.png'
+import { useShoppingCartStore } from '@/stores/shoppingCartStore.ts'
+const store = useShoppingCartStore()
 
 const selectedDelivery = ref<string | null>(null)
 const selectedPayment = ref<string | null>(null)
@@ -27,26 +29,54 @@ const selectedPayment = ref<string | null>(null)
       <h1>Payment journey starts here</h1>
       <button class="djunglebutton">Shopping Cart</button>
 
-      <div class="pl-6 pt-6 pb-12 mt-7 bg-orange-400 w-3/4 rounded-xl mx-auto">
-        <h2 class="text-white text-3xl pb-10 text-center">Your Cart</h2>
-        <article class="flex justify-around">
-          <p class="text-white text-xl">Article</p>
-          <p class="text-white text-xl">Price</p>
-          <p class="text-white text-xl">Quantity</p>
-          <p class="text-white text-xl">Sum</p>
-        </article>
-
-        <ul class="flex justify-around">
-          <li class="text-xl">Dino Card</li>
-          <li class="text-xl">420/st</li>
-          <li class="text-xl">3</li>
-          <li class="text-xl">1260</li>
-          <!-- <button @click="removeItem" class="">X</button> -->
-        </ul>
+      <div class=" mx-auto pt-2 mt-8 bg-orange-400 space-y-6 w-full max-w-[530px] h-full sm:h-max text-white px-2 pb-16 shadow-xl rounded-md "
+      >
+      <h1 class="text-2xl">Your cart ({{ store.setItemsCount }} articles)</h1>
+    <div>
+      <ul class="space-y-4 max-h-[calc(100vh-320px)] overflow-y-auto px-2">
+        <li v-for="product in store.shoppingCart" class="flex gap-4 items-center border-b-2 border-b-[#006649] pb-4">
+          <img
+            :src="product.src"
+            alt="dino card"
+            class="size-12 object-center object-cover rounded cursor-pointer"
+          />
+          <div class="w-full">
+            <div class="flex justify-between items-center gap-2 w-full h-[36px]">
+              <p class="">{{ product.cardType }}</p>
+              <img src="/images/green_right_arrow.svg" alt="arrow" class="size-6 cursor-pointer" />
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center text-white">
+                <button
+                  class="bg-[#2a7056] size-10 rounded-[5px]"
+                  @click="store.deleteProduct({ ...product, amount: 1 })"
+                >
+                  -
+                </button>
+                <p class="grid place-items-center text-white size-7 text-lg">
+                  {{ product.amount }}
+                </p>
+                <button
+                  class="bg-[#2a7056] size-10 rounded-[5px]"
+                  @click="store.addProduct({ ...product, amount: 1 })"
+                >
+                  +
+                </button>
+              </div>
+              <p class="text-lg">$ {{ store.calcProductTotal(product) }}</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="flex justify-between w-full text-lg pt-2 px-2">
+        <p class="text-[#2a7056]">Total</p>
+        <p class="">$ {{ store.setTotal }}</p>
       </div>
     </div>
+    </div>
+  </div>
 
-    <div class="mt-20 max-w-md mx-auto space-y-8 bg-white rounded-md p-10">
+    <div class="mt-20 max-w-md mx-auto space-y-8 bg-white rounded-md p-10 mb-5">
       <!-- Leveranssektion -->
       <div>
         <h2 class="text-lg font-semibold mb-2">Leverans</h2>
@@ -133,7 +163,7 @@ const selectedPayment = ref<string | null>(null)
         <div class="text-xl font-semibold">
           Totalbelopp <a href="#" class="underline text-sm font-normal">Visa detaljer</a>
         </div>
-        <div class="text-2xl font-bold my-2">1260 kr</div>
+        <div class="text-2xl font-bold my-2">$ {{ store.setTotal }}</div>
         <button
           class="bg-black text-white w-full py-3 rounded text-lg font-semibold hover:bg-gray-900 transition-colors cursor-pointer"
           :disabled="!selectedPayment || !selectedDelivery"
@@ -159,7 +189,7 @@ const selectedPayment = ref<string | null>(null)
 .hero {
   position: relative;
   overflow: hidden;
-  height: 120rem;
+  height: 100%;
 }
 
 .hero-content {
