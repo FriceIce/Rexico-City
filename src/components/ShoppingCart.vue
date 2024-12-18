@@ -12,6 +12,7 @@ const store = useShoppingCartStore()
       <ul class="space-y-4 max-h-[calc(100vh-320px)] overflow-y-auto px-2">
         <li
           v-for="product in store.shoppingCart"
+          :key="product.id"
           class="flex gap-4 items-center border-b-2 border-b-[#006649] pb-4"
         >
           <img

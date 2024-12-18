@@ -34,7 +34,7 @@ const selectedPayment = ref<string | null>(null)
       <h1 class="text-2xl">Your cart ({{ store.setItemsCount }} articles)</h1>
     <div>
       <ul class="space-y-4 max-h-[calc(100vh-360px)] overflow-y-auto px-2">
-        <li v-for="product in store.shoppingCart" class="flex gap-4 items-center border-b-2 border-b-[#006649] pb-4">
+        <li v-for="product in store.shoppingCart" :key="product.id" class="flex gap-4 items-center border-b-2 border-b-[#006649] pb-4">
           <img
             :src="product.src"
             alt="dino card"
