@@ -65,27 +65,14 @@ export default defineComponent({
 * {
   margin: 0;
   padding: 0;
-  
 }
-
-
-
-/* .card-page3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  
-} */
 
 .card-page3 {
   text-align: center;
   margin-top: 2rem;
   background-color: rgb(83, 168, 130);
   height: auto;
-  
+  padding: 1rem;
 }
 
 .container {
@@ -93,9 +80,8 @@ export default defineComponent({
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid pink; */
-  margin-left: 4.6rem;
-  
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .text {
@@ -104,36 +90,38 @@ export default defineComponent({
   justify-content: center;
   align-items: center;
   background-color: white;
-  height: 50rem;
-  width: 40rem;
-  padding: 3rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 .text h1 {
-  font-size: 3rem;
-  margin-top: -4rem;
+  font-size: 2rem;
+  margin-top: 1rem;
 }
 
 .text h2 {
-  margin-top: 1.5rem;
-  font-size: 2rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
 }
 
 .text h3 {
-  margin-top: 3rem;
-  font-size: 1.5rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
 }
 
 .image {
   object-fit: cover;
-  width: 60rem;
-  height: 50rem;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
 }
 
 .cards {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   margin-top: 2rem;
 }
 
@@ -142,8 +130,8 @@ export default defineComponent({
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 1rem;
-  width: 15rem;
-  height: 20rem;
+  width: 100%;
+  max-width: 300px;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -151,7 +139,7 @@ export default defineComponent({
 
 .card h2 {
   color: rgb(27, 169, 5);
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .card:hover {
@@ -159,12 +147,8 @@ export default defineComponent({
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-
-
-
 button {
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
   padding: 10px 20px;
   background-color: var(--green);
   color: #fff;
@@ -177,67 +161,51 @@ button:hover {
   color: rgb(103, 167, 103);
 }
 
-
 @media (max-width: 1000px) {
-  .image {
-    object-fit: cover;
-    width: 70rem;
-    height: 30rem;
-  }
-
-  .text {
-    height: 30rem;
-    width: 40rem;
-  }
-
   .text h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .text h2 {
-    margin-top: 0.3rem;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .text h3 {
-    margin-top: 1rem;
     font-size: 1rem;
   }
 }
 
 @media (max-width: 500px) {
-  .image {
-    object-fit: cover;
-    height: 20rem;
-    width: 26rem;
+  .container {
+    flex-direction: column;
   }
 
   .text {
-    height: 20rem;
-    width: 26rem;
+    padding: 1rem;
   }
 
   .text h1 {
-    font-size: 2rem;
-    margin-top: 3rem;
+    font-size: 1.5rem;
   }
 
   .text h2 {
-    margin-top: 0.1rem;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   .text h3 {
-    margin-top: 1rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
-  .container {
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
+  .image {
+    max-width: 100%;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
   }
 }
 </style>

@@ -60,17 +60,14 @@ export default defineComponent({
 
 <style scoped>
 .cards-container {
-  
-  padding: 5rem;
-  width: 80rem;
-  height: 30rem;
+  padding: 2rem;
+  width: 100%;
   margin: 0 auto;
   overflow-x: auto;
   display: flex;
   gap: 1rem;
   justify-content: center;  
   align-items: center;
- /*  border: 2px solid pink; */
   margin-bottom: 3rem;
 }
 
@@ -80,44 +77,62 @@ export default defineComponent({
 
 .card {
   display: flex;
-  
   align-items: center;
   flex-direction: column;
   background-color: white;
-  
   height: 28rem;
   width: 18rem;
   text-align: center;
-  
   border-radius: 1rem;
   padding: auto;
-  transition: transform 0.3s ease; /* Add smooth transition */
+  transition: transform 0.3s ease;
   cursor: pointer;
 }
 
-.card h3{
+.card h3 {
   margin-top: 1rem;
   font-size: 2rem;
 }
 
 .card-image {
-  width: 18rem;
-  height: 20rem;
+  width: 100%;
+  height: auto;
   border-radius: 1rem 1rem 0 0;
 }
 
 .card:hover {
-  transform: scale(1.05); /* Make card 5% bigger on hover */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add subtle shadow on hover */
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+  }
+
+  .card h3 {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 375px) {
   .cards-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;  
-   /*  border: 2px solid pink; */
-    overflow-y: scroll;
+    padding: 1rem;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
   }
 }
 </style>

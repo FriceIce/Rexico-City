@@ -7,7 +7,7 @@ const route = useRoute()
 </script>
 
 <template>
-  <div id="app relative">
+  <div id="app" class="relative">
     <Navbar v-if="!route.meta.hideNavbar" />
     <ShoppingCart />
     <transition name="slide-right">
@@ -53,5 +53,38 @@ const route = useRoute()
 }
 .slide-right-leave-to {
   transform: translateX(100%);
+}
+
+/* Responsive design */
+#app {
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  #app {
+    padding: 10px;
+  }
+
+  Navbar, Footer {
+    font-size: 14px;
+  }
+
+  .slide-right-enter-active, .slide-right-leave-active {
+    transition: transform 0.2s ease-out;
+  }
+}
+
+@media (max-width: 480px) {
+  #app {
+    padding: 5px;
+  }
+
+  Navbar, Footer {
+    font-size: 12px;
+  }
+
+  .slide-right-enter-active, .slide-right-leave-active {
+    transition: transform 0.1s ease-out;
+  }
 }
 </style>

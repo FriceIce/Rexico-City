@@ -1,6 +1,5 @@
 <template>
   <div class="nav-links">
-    <!-- Använd router-link istället för vanliga a-taggar -->
     <router-link to="/calendar">Calendar</router-link>
     <router-link to="/tickets">Tickets</router-link>
     <router-link to="/mypage">Mypage</router-link>
@@ -54,18 +53,27 @@ export default {
   width: 100%;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   .nav-links {
-    display: flex;
-    justify-content: center;
-    gap: 0.9rem;
-    width: 100%;
-    top: 1rem;
-    margin-top: 1.2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
   .nav-links a {
     font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .nav-links {
+    gap: 0.9rem;
+    padding: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
     padding: 0.5rem;
   }
 }
