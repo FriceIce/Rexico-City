@@ -10,7 +10,7 @@
       <!-- Logo (Rexico City) -->
       <div class="logo" @click="goToHome">Rexico City</div>
 
-      <div class="flex gap-6 items-center h-full">
+      <div class="flex gap-2 md:gap-6 items-center h-full">
         <div
           :class="`relative ${store.shoppingCart.length === 0 && 'hidden'}`"
           @click="store.openShoppingCart = !store.openShoppingCart"
@@ -190,13 +190,9 @@ ul li a:hover {
 
 @media (max-width: 375px) {
   .hamburger {
-    position: static;
-    top: 0.5rem;
-    right: 0.8rem;
-    display: block;
     font-size: 1.5rem;
     cursor: pointer;
-    width: auto;
+    /* width: auto; */
   }
 
   ul {
