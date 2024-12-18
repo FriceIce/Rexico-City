@@ -70,11 +70,12 @@ export default defineComponent({
 
 <style scoped>
 .search-page {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
+  justify-content: flex-start;
+  min-height: 100vh;
   background-color: var(--green);
   padding: 1rem;
 }
@@ -89,10 +90,12 @@ export default defineComponent({
 }
 
 .search-bar-container {
-  position: fixed;
+  position: sticky;
+  top: 7rem;
   width: 100%;
   max-width: 600px;
-  margin-bottom: 40rem;
+  margin: 0 auto;
+  padding: 0rem;
 }
 
 .search-icon {
@@ -124,18 +127,20 @@ export default defineComponent({
   gap: 1rem;
   width: 100%;
   max-width: 600px;
-  margin-top: 10rem;
+  margin-top: 14rem;
 }
 
 @media (max-width: 600px) {
 
   .search-bar-container {
   position: fixed;
+  margin-top: 0rem;
   width: 80%;
   max-width: 600px;
   margin-bottom: 30rem;
 }
   .search-bar {
+    
     font-size: 0.875rem;
     padding: 0.5rem 0.75rem 0.5rem 2rem;
   }
@@ -149,12 +154,13 @@ export default defineComponent({
   }
 
   .cards-list {
-  margin-top: 9rem;
-  display: flex;
+    display: flex;
   flex-direction: column;
   gap: 1rem;
   width: 100%;
   max-width: 600px;
+  margin-top: 9rem; /* reduce the large margin */
+  overflow: auto;
 }
 }
 </style>
