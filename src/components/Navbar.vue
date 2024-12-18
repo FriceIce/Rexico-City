@@ -156,12 +156,12 @@ nav {
 ul {
   flex-direction: column;
   position: absolute;
-  top: 3.2rem;
+  top: 48px;
   right: 0;
-  background-color: black;
+  background-color: #094c45;
   display: none;
-  padding: 0rem;
-  border-radius: 0.5rem;
+  padding: 50px;
+  border-bottom-left-radius: 4px;
   transition: all 0.3s ease-in-out;
 }
 
