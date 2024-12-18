@@ -25,9 +25,12 @@
     </div>
     <div class="cards">
       <div class="card">
-        <h2>A CUP OF REX</h2>
+        <h2>PANGEA SPECIAL</h2>
         <h3>$10</h3>
-        <p>Enjoy tea with Rexy and delight in homemade scones.</p>
+        <p>Enjoy tea with Rexy and delight in homemade scones. </p>
+        <p>Bring your friends for a whole new rexy experience. </p>
+        <p>☕ Finest tea on the pangea planet.  </p>
+        <p>☕ Choose between green, green, or green tea.</p>
       </div>
       <div class="card">
         <h2>GRANDMA REXY SCONES</h2>
@@ -65,14 +68,20 @@ export default defineComponent({
 * {
   margin: 0;
   padding: 0;
+  
 }
 
 .card-page3 {
+  background-color: var(--green2);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
-  margin-top: 2rem;
-  background-color: rgb(83, 168, 130);
+  margin-top: 0rem;
+  /* background-color: rgb(83, 168, 130); */
   height: auto;
   padding: 0rem;
+ /*  border: 2px solid pink; */
 }
 
 .container {
@@ -81,7 +90,8 @@ export default defineComponent({
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  
+  /* border: 2px solid pink; */
 }
 
 .text {
@@ -92,54 +102,73 @@ export default defineComponent({
   background-color: white;
   padding: 1rem;
   box-sizing: border-box;
-  max-width: 100%;
+  max-width: 40rem;
+  height: auto;
+ 
+  
 }
 
 .text h1 {
   font-size: 2rem;
-  margin-top: 1rem;
+  margin-top: -5rem;
 }
 
 .text h2 {
-  margin-top: 1rem;
+  margin-top: 2rem;
   font-size: 1.5rem;
 }
 
 .text h3 {
-  margin-top: 1rem;
+  margin-top: 2rem;
   font-size: 1.2rem;
 }
 
 .image {
   object-fit: cover;
   width: 100%;
-  max-width: 600px;
-  height: auto;
+  max-width: 50rem;
+  height: 40rem;
 }
 
 .cards {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   gap: 1rem;
   margin-top: 2rem;
+  width: auto;
+  background-color: var(--green2);
 }
 
 .card {
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 0rem;
-  width: 100%;
+  padding: 1rem;
+  width: auto;
   max-width: 300px;
+  height: auto;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
 .card h2 {
-  color: rgb(27, 169, 5);
-  font-size: 1.5rem;
+  color: var(--green2);
+  font-size: 2.2rem;
+  margin-top: 1rem;
+}
+
+.card h3 {
+  color: var(--green);
+  font-size: 2.5rem;
+  
+}
+
+.card p { 
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  
 }
 
 .card:hover {
@@ -162,7 +191,12 @@ button:hover {
 }
 
 @media (max-width: 1000px) {
-
+  .container {
+    margin-top: 0rem;
+    flex-direction: column-reverse;
+    padding: auto;
+    
+  }
   .card-page3 {
   padding: 1rem;
 }
@@ -179,16 +213,28 @@ button:hover {
   }
 }
 
+.image{
+  height: auto;
+}
+
+.text{
+  height: auto;
+  
+}
+
 @media (max-width: 500px) {
   .container {
-    flex-direction: column;
+    margin-top: -1rem;
+    flex-direction: column-reverse;
   }
 
   .text {
     padding: 1rem;
+    height: auto;
   }
 
   .text h1 {
+    margin-top: 1rem;
     font-size: 1.5rem;
   }
 
@@ -202,6 +248,7 @@ button:hover {
 
   .image {
     max-width: 100%;
+    height: auto;
   }
 
   .cards {

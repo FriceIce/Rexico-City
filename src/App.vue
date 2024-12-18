@@ -27,6 +27,7 @@ const route = useRoute()
 :root {
   background-image: url('./assets/images/jungle.png');
   --green: rgb(9, 76, 69);
+  --green2: rgb(86, 167, 131);
   --orange: rgb(253, 150, 38);
   --grey: rgb(51, 51, 51);
   --white: rgb(255, 255, 255);
