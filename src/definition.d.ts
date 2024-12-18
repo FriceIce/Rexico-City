@@ -36,4 +36,5 @@ type ShoppingCart = {
   itemsCount: number
   total: number
   openShoppingCart: boolean
+  showShoppingCartModal: boolean
 }

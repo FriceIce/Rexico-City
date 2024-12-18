@@ -5,6 +5,9 @@ import { computed, ref, watch } from 'vue'
 import ShoppingCartModal from '@/components/ShoppingCartModal.vue'
 import PurchaseSummary from '@/components/PurchaseSummary.vue'
 import axios from 'axios'
+import { useShoppingCartStore } from '@/stores/shoppingCartStore'
+
+const store = useShoppingCartStore()
 
 const ticketCounter = ref<number>(0)
 const nextStep = ref<boolean>(false)
@@ -47,8 +50,8 @@ const { data, isLoading, isError } = useQuery<Product>({
 
 <template>
   <main v-if="!isLoading && data && !isError" class="relative h-[calc(100dvh-104px)]">
-    <ShoppingCartModal />
-    <div class="bg-white text-black w-full flex flex-col items-center p-6">
+    <ShoppingCartModal v-if="store.showShoppingCartModal" />
+    <div class="bg-[#f1f9f6] text-black w-full flex flex-col items-center p-6">
       <section v-if="!nextStep" class="space-y-16 py-[29px] md:py-20">
         <article class="space-y-8 max-w-[610px]">
           <section class="space-y-6">
