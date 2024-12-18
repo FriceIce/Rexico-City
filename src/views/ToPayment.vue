@@ -27,14 +27,14 @@ const selectedPayment = ref<string | null>(null)
     <div class="hero-content flex flex-col items-center text-center px-4 md:px-8">
       <img src="/src/assets/images/loggan.png" alt="Rexico City" class="hero-image w-full max-w-xs sm:max-w-md" />
       <h1 class="text-3xl md:text-4xl font-bold mt-4 text-white">Payment journey starts here</h1>
-      <button class="djunglebutton bg-orange-400 text-white font-semibold py-2 px-4 rounded-lg shadow-md mt-4 hover:bg-orange-500 transition">
-        Shopping Cart
+      <button class="djunglebutton bg-orange-400 text-white text-2xl font-semibold py-2 px-4 rounded-lg shadow-md mt-4 hover:bg-orange-500 transition">
+       Shopping Cart
       </button>
 
       <div class="w-full max-w-md bg-orange-400 text-white rounded-lg shadow-lg mt-6 p-4 md:p-6">
         <h1 class="text-xl md:text-2xl font-semibold"> {{ store.setItemsCount }} articles</h1>
-        <ul class="mt-4 space-y-4 max-h-[calc(100vh-360px)] overflow-y-auto">
-          <li v-for="product in store.shoppingCart" :key="product.id" class="flex gap-4 items-center border-b border-green-600 pb-4">
+        <ul class="mt-4 space-y-4 max-h-[calc(100vh-320px)] overflow-y-auto">
+          <li v-for="product in store.shoppingCart" :key="product.id" class="flex gap-4 items-center border-b border-green-600">
             <img :src="product.src" alt="dino card" class="w-16 h-16 rounded" />
             <div class="flex-1">
               <div class="flex justify-between items-center">
@@ -69,7 +69,7 @@ const selectedPayment = ref<string | null>(null)
       </div>
     </div>
 
-    <div class="mt-8 w-full max-w-md mx-auto bg-white rounded-lg p-4 md:p-6">
+    <div class="mt-8 w-full max-w-md mx-auto bg-white rounded-lg p-4 md:p-6 mb-6">
       <!-- Leverans -->
       <div class="mb-6">
         <h2 class="text-lg font-semibold mb-2">Leverans</h2>
@@ -124,7 +124,7 @@ const selectedPayment = ref<string | null>(null)
         </div>
         <p class="text-2xl font-bold mt-2">$ {{ store.setTotal }}</p>
         <button
-          class="bg-black text-white w-full py-3 rounded-lg mt-4 hover:bg-gray-900 transition disabled:bg-gray-400"
+          class="bg-black text-white w-full py-3 rounded-lg mt-4 hover:bg-gray-500 transition disabled:bg-gray-400"
           :disabled="!selectedPayment || !selectedDelivery"
         >
           Betala köp
@@ -147,10 +147,13 @@ const selectedPayment = ref<string | null>(null)
 .hero-image {
   max-width: 100%;
   height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .djunglebutton {
   width: 100%;
+  height: 4rem;
 }
 
 .hero-content {
@@ -178,8 +181,7 @@ const selectedPayment = ref<string | null>(null)
 }
 
 .hero-image {
-  display: block;
-  margin: 0 auto;
+
 }
 
 
