@@ -16,8 +16,8 @@ import visaLogo from '../assets/images/visaLogo.png'
 import bankidLogo from '../assets/images/bankidLogo.png'
 import swishLogo from '../assets/images/swishLogo.png'
 import { useShoppingCartStore } from '@/stores/shoppingCartStore.ts'
-const store = useShoppingCartStore()
 
+const store = useShoppingCartStore()
 const selectedDelivery = ref<string | null>(null)
 const selectedPayment = ref<string | null>(null)
 </script>
