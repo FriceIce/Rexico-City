@@ -2,10 +2,10 @@
 import TicketsLayout from '@/components/TicketLayout.vue'
 </script>
 <template>
-  <section class="text-white max-w-[960px] w-[90%] mx-auto">
-    <div class="p-4">
+  <section class="text-white max-w-[960px] w-[100%] mx-auto">
+    <div class="px-4 pb-20">
       <header
-        class="space-y-6 bg-[#073024] text-center max-w-[640px] w-[90%] p-6 mx-auto my-10 md:my-16 rounded shadow-xl"
+        class="space-y-6 bg-[#073024] text-center max-w-[640px] w-[100%] p-6 mx-auto my-10 md:my-16 rounded shadow-xl"
       >
         <h1 class="text-[30px] md:text-[50px] font-bold">Prices & Tickets</h1>
         <p class="text-base">
