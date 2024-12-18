@@ -40,5 +40,26 @@
       "bgColor": "#000000",
       "text": "#FFFFFF"
     }
+  },
+  {
+    "id": 3,
+    "background": "#f5abf9",
+    "image": {
+      "src": "/images/mini_saurus.png",
+      "alt": ""
+    },
+    "title": {
+      "text": "Triassic Burger INCLUDED!!!🍔",
+      "color": "#f8fb38"
+    },
+    "subtitle": {
+      "text": "Why don't you spoil your kids!? 🧒👶. Get a free Triassic Burger with every Mini Saurus ticket! 👏🥳🍔",
+      "color": "#000000"
+    },
+    "price": 3.14,
+    "button": {
+      "bgColor": "#000000",
+      "text": "#FFFFFF"
+    }
   }
 ]
