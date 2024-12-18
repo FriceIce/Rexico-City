@@ -23,11 +23,11 @@ const store = useShoppingCartStore()
           :key="product.id"
           class="flex gap-4 items-center border-b-2 border-b-[#006649] pb-4"
         >
-          <RouterLink :to="`/tickets/${product.id}`" class="size-12">
+          <RouterLink :to="`/tickets/${product.id}`" class="size-20 grid place-items-center">
             <img
               :src="product.src"
               :alt="product.cardType"
-              class="size-full object-center object-cover rounded cursor-pointer"
+              class="w-full object-center object-contain rounded cursor-pointer"
             />
           </RouterLink>
           <div class="w-full">
