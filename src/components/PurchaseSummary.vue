@@ -52,7 +52,9 @@ const store = useShoppingCartStore()
         </div>
         <div class="flex justify-between">
           <h4 class="font-bold text-xl">Total</h4>
-          <p class="text-xl font-bold">$ {{ price }}</p>
+          <p class="text-xl font-bold">
+            $ {{ String(price).indexOf('.') >= 0 ? price.toFixed(2) : price }}
+          </p>
         </div>
       </div>
     </div>
