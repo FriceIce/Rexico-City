@@ -24,7 +24,10 @@ const setToCheckout = () => {
     <p class="text-neutral-600 text-xl">The product is no added to the cart!</p>
     <div class="flex justify-around gap-2 mx-auto w-[100%] md:w-[80%] text-white">
       <RouterLink to="/tickets">
-        <button class="bg-[#7448c4] py-[10px] px-5 rounded-full lg:hover:scale-105 transition-all">
+        <button
+          class="bg-[#7448c4] py-[10px] px-5 rounded-full lg:hover:scale-105 transition-all"
+          @click="store.showShoppingCartModal = !store.showShoppingCartModal"
+        >
           Continue shopping
         </button>
       </RouterLink>
