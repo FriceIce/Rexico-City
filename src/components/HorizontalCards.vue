@@ -63,9 +63,9 @@ export default defineComponent({
   padding: 0rem;
   width: 100%;
   margin: 0 auto;
-  overflow-x: auto;
+  overflow: visible;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center;  
   align-items: center;
   margin-bottom: 3rem;
@@ -87,6 +87,7 @@ export default defineComponent({
   padding: auto;
   transition: transform 0.3s ease;
   cursor: pointer;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card h3 {
@@ -102,7 +103,7 @@ export default defineComponent({
 
 .card:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 7px 12px rgba(0,0,0,0.1);
 }
 
 @media (max-width: 768px) {
@@ -129,6 +130,7 @@ export default defineComponent({
   .card {
     width: 100%;
     height: auto;
+    
   }
 
   .card h3 {
