@@ -47,7 +47,7 @@ export default {
   justify-content: center;
   z-index: 2;
   text-align: center;
-  padding: 0rem;
+  padding: 1rem;
 }
 
 .hero-content img {
@@ -63,6 +63,11 @@ export default {
   padding: 0rem;
   border-radius: 10px;
   text-shadow: 6px 7px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-image {
+  display: block;
+  margin: 0 auto;
 }
 
 .hero-content button {

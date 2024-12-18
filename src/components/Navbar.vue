@@ -8,7 +8,7 @@
       </div>
 
       <!-- Logo (Rexico City) -->
-      <div class="logo" @click="goToHome">Rexico City</div>
+      <div class="logo" @click="goToHome()">Rexico City</div>
 
       <div class="flex gap-6 items-center">
         <div
@@ -129,6 +129,7 @@ export default {
   z-index: 1001;
   width: 4rem;
   text-align: center; /* Added to center the icon */
+  padding: 1rem;
 }
 
 .hamburger:hover {

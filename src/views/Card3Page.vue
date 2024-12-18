@@ -90,7 +90,7 @@ export default defineComponent({
   justify-content: center;
   align-items: center;
   background-color: white;
-  padding: 0rem;
+  padding: 1rem;
   box-sizing: border-box;
   max-width: 100%;
 }
@@ -185,7 +185,7 @@ button:hover {
   }
 
   .text {
-    padding: 0rem;
+    padding: 1rem;
   }
 
   .text h1 {
