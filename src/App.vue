@@ -6,9 +6,9 @@ const route = useRoute()
 </script>
 
 <template>
-  <div id="app" class="relative">
+  <div id="app" class="relative flex flex-col h-dvh">
     <Navbar v-if="!route.meta.hideNavbar" />
-    <router-view v-slot="{ Component }">
+    <router-view v-slot="{ Component }" class="flex-[4]">
       <transition name="slide-right">
         <component :is="Component" />
       </transition>

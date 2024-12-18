@@ -80,11 +80,6 @@ export default {
 </script>
 
 <style scoped>
-header {
-  display: sticky;
-  inset: 0 0 0 0;
-}
-
 .logo {
   display: grid;
   place-items: center;
@@ -141,14 +136,14 @@ header {
 .navbar {
   display: flex;
   justify-content: center;
-  height: 3rem;
+  min-height: 48px;
   position: sticky;
+  inset: 0 0 0 0;
+  z-index: 10;
 
   background-color: var(--green);
   color: white;
-  padding: 0rem;
-  z-index: 1000;
-  /* border: 2px solid pink; */
+  /* padding: 10px; */
 }
 
 nav {

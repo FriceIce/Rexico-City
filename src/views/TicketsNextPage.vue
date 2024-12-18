@@ -49,9 +49,9 @@ const { data, isLoading, isError } = useQuery<Product>({
 </script>
 
 <template>
-  <main v-if="!isLoading && data && !isError" class="relative h-[calc(100dvh-104px)]">
+  <main v-if="!isLoading && data && !isError" class="relative">
     <ShoppingCartModal v-if="store.showShoppingCartModal" />
-    <div class="bg-[#f1f9f6] text-black w-full flex flex-col items-center p-6">
+    <div class="bg-[#f1f9f6] h-full text-black w-full flex flex-col items-center p-6">
       <section v-if="!nextStep" class="space-y-16 py-[29px] md:py-20">
         <article class="space-y-8 max-w-[610px]">
           <section class="space-y-6">

@@ -14,7 +14,10 @@ defineProps<{
 const store = useShoppingCartStore()
 </script>
 <template>
-  <section v-if="nextStep && data" class="flex flex-col items-center gap-6 w-full max-w-[610px]">
+  <section
+    v-if="nextStep && data"
+    class="flex flex-col items-center justify-center gap-6 w-full max-w-[610px] h-full"
+  >
     <div class="bg-[#1b5240] text-white w-full py-8 px-4 rounded">
       <h3 class="text-3xl pb-6">Summary</h3>
       <div class="space-y-5">
