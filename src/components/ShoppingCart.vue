@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useShoppingCartStore } from '@/stores/shoppingCartStore.ts'
+import { RouterLink } from 'vue-router'
 const store = useShoppingCartStore()
 </script>
 <template>
@@ -15,11 +16,13 @@ const store = useShoppingCartStore()
           :key="product.id"
           class="flex gap-4 items-center border-b-2 border-b-[#006649] pb-4"
         >
-          <img
-            :src="product.src"
-            alt="dino card"
-            class="size-12 object-center object-cover rounded cursor-pointer"
-          />
+          <RouterLink :to="`/tickets/${product.id}`" class="size-12">
+            <img
+              :src="product.src"
+              :alt="product.cardType"
+              class="size-full object-center object-cover rounded cursor-pointer"
+            />
+          </RouterLink>
           <div class="w-full">
             <div class="flex justify-between items-center gap-2 w-full h-[36px]">
               <p class="">{{ product.cardType }}</p>
