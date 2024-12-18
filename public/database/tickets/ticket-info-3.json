@@ -1,0 +1,15 @@
+{
+  "id": 3,
+  "title": "Triassic Burger INCLUDED!!!🍔",
+  "price": 3.14,
+  "src": "/images/mini_saurus.png",
+  "cardType": "Mini Saurus Card",
+  "description": "Get a free Triassic Burger with every Mini Saurus ticket! 👏🥳🍔",
+  "includes": [
+    "Entry for the entire summer season 2025 ☀️",
+    "Thrilling rides all summer long 🎢",
+    "Access to all concerts on the Main and Small Stages 🎶",
+    "Access to all dance evenings at the Dance Pavilion 💃",
+    "Exclusive special offers 🏷️"
+  ]
+}

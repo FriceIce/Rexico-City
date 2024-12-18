@@ -61,5 +61,6 @@ const { data, isLoading } = useQuery<Array<TicketCard>>({
 .card-layout {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  
 }
 </style>
