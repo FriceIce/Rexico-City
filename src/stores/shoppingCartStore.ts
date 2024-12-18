@@ -18,7 +18,7 @@ export const useShoppingCartStore = defineStore('shoppingCart', {
 
       // calculating the amount of decimal numbers.
       const decimalIndex = sum.toString().indexOf('.')
-      return decimalIndex > 2 ? sum.toFixed(2) : sum
+      return decimalIndex >= 0 ? sum.toFixed(2) : sum
     },
 
     setItemsCount: (state) => {
@@ -72,7 +72,7 @@ export const useShoppingCartStore = defineStore('shoppingCart', {
       const price = ticket.price * amount
       const decimalIndex = price.toString().split('.')[1]
 
-      return decimalIndex && decimalIndex.length > 2 ? price.toFixed(2) : price
+      return decimalIndex && decimalIndex.length > 0 ? price.toFixed(2) : price
     },
   },
 })
