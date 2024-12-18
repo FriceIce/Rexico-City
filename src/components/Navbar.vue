@@ -10,7 +10,7 @@
       <!-- Logo (Rexico City) -->
       <div class="logo" @click="goToHome()">Rexico City</div>
 
-      <div class="flex gap-6 items-center">
+      <div class="flex gap-6 items-center h-full">
         <div
           :class="`relative ${store.shoppingCart.length === 0 && 'hidden'}`"
           @click="store.openShoppingCart = !store.openShoppingCart"
@@ -80,36 +80,40 @@ export default {
 </script>
 
 <style scoped>
+header {
+  display: sticky;
+  inset: 0 0 0 0;
+}
+
 .logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
   font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
   color: white;
   padding: 0rem;
   text-decoration: none;
+  padding-inline: 6px;
+  height: 100%;
   transition: color 0.3s ease-in-out;
 }
 
 .logo:hover {
   /* color: var(--orange); */ /* Optional hover effect */
   background-color: rgba(255, 255, 255, 0.2);
-  z-index: -3000;
 }
 
 .search-icon {
-  position: static;
-  top: -0.1rem;
-  left: 0.1rem;
+  display: grid;
+  place-items: center;
   font-size: 1.2rem;
   cursor: pointer;
   z-index: 1001;
   padding: 0rem;
   transition: background-color 0.3s ease;
   width: 4rem;
+  height: 100%;
   text-align: center;
 }
 
@@ -119,17 +123,14 @@ export default {
 }
 
 .hamburger {
-  position: static;
-  /* display: block; */
-  right: 0.1rem;
+  display: grid;
+  place-items: center;
   font-size: 1.5rem;
   cursor: pointer;
-  /* padding: 0.8rem; */
   transition: background-color 0.3s ease;
   z-index: 1001;
   width: 4rem;
-  text-align: center; /* Added to center the icon */
-  padding: 1rem;
+  height: 100%;
 }
 
 .hamburger:hover {
@@ -142,7 +143,7 @@ export default {
   justify-content: center;
   height: 3rem;
   position: sticky;
-  
+
   background-color: var(--green);
   color: white;
   padding: 0rem;
@@ -155,7 +156,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  
 }
 
 ul {

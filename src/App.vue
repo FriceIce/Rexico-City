@@ -2,19 +2,19 @@
 import { useRoute } from 'vue-router'
 import Navbar from './components/Navbar.vue'
 import Footer from '../src/components/Footer.vue'
-// import ShoppingCart from '@/components/ShoppingCart.vue'
 const route = useRoute()
 </script>
 
 <template>
   <div id="app" class="relative">
     <Navbar v-if="!route.meta.hideNavbar" />
-    <ShoppingCart />
-    <transition name="slide-right">
-      <router-view />
-    </transition>
+    <router-view v-slot="{ Component }">
+      <transition name="slide-right">
+        <component :is="Component" />
+      </transition>
+    </router-view>
 
-    <Footer/>
+    <Footer />
   </div>
 </template>
 <style>
@@ -65,11 +65,13 @@ const route = useRoute()
     padding: 0px;
   }
 
-  Navbar, Footer {
+  Navbar,
+  Footer {
     font-size: 14px;
   }
 
-  .slide-right-enter-active, .slide-right-leave-active {
+  .slide-right-enter-active,
+  .slide-right-leave-active {
     transition: transform 0.2s ease-out;
   }
 }
@@ -78,14 +80,15 @@ const route = useRoute()
   #app {
     padding: 0px;
     margin: 0;
-
   }
 
-  Navbar, Footer {
+  Navbar,
+  Footer {
     font-size: 12px;
   }
 
-  .slide-right-enter-active, .slide-right-leave-active {
+  .slide-right-enter-active,
+  .slide-right-leave-active {
     transition: transform 0.1s ease-out;
   }
 }
