@@ -55,7 +55,7 @@ const store = useShoppingCartStore()
     <div class="">
       <div class="flex flex-col gap-2" @click="store.openShoppingCart = !store.openShoppingCart">
         <!-- Här kan du läga pathen till de du vill annars kan vi plocka bort router-linken -->
-        <router-link to="/">
+        <router-link to="/topayment">
           <button
             class="py-[10px] bg-[#2a7056] text-white rounded-full w-full border-2 border-[#2a7056]"
           >
