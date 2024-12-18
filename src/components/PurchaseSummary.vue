@@ -11,7 +11,7 @@ defineProps<{
   setNextStep: () => void
 }>()
 
-const { addProduct } = useShoppingCartStore()
+const store = useShoppingCartStore()
 </script>
 <template>
   <section v-if="nextStep && data" class="flex flex-col items-center gap-6 w-full max-w-[610px]">
@@ -62,7 +62,12 @@ const { addProduct } = useShoppingCartStore()
       </button>
       <button
         class="flex-1 bg-[#2a7056] text-white py-[10px] rounded-full border-2 border-[#2a7056] flex justify-center"
-        @click="addProduct({ ...data, amount: ticketCounter })"
+        @click="
+          () => {
+            store.addProduct({ ...data, amount: ticketCounter })
+            store.showShoppingCartModal = true
+          }
+        "
       >
         Add to cart
       </button>

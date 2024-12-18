@@ -6,6 +6,7 @@ export const useShoppingCartStore = defineStore('shoppingCart', {
     itemsCount: 0,
     total: 0,
     openShoppingCart: false,
+    showShoppingCartModal: false,
   }),
   persist: true,
   getters: {
